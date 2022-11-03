@@ -1,0 +1,45 @@
+/* 
+    working with placeholder.js  
+    add class .palceholder to pickture element
+    and add onload="loaded(this)" atribute
+
+    placeholder.css first adds temperary background effect antil image is loaded,
+    second when image is loaded it slowly appears,
+    third placeholder.js remove class .placeholder and temperary background effect disapear
+*/
+
+
+/* simple gradient */
+.placeholder {
+    position: relative;
+    display: block;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+}
+
+picture img {
+    display: block;
+    width: 100%;
+    height: fit-content;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+picture img.loaded {
+    opacity: 1;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

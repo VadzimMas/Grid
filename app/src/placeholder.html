@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+              content="IE=edge">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <script src="js/placeholder.js"></script>
+        <link rel="stylesheet"
+              href="css/blocks/placeholder.css">
+
+        <title>Document</title>
+        <style>
+                body {
+                        text-align: center;
+                        background-color: rgb(1, 1, 47);
+                        color: wheat;
+                }
+        </style>
+</head>
+
+<body>
+        <h1>Lazy load with placeholder</h1>
+
+
+
+
+
+        <picture class='placeholder'>
+                <source media="(max-width: 400px)"
+                        srcset="
+                         ../dest/img/0-400w-1x.avif 1x,
+                         ../dest/img/0-400w-2x.avif 2x,
+                         ../dest/img/0-400w-1x.webp 1x,
+                         ../dest/img/0-400w-2x.webp 2x,
+                         ../dest/img/0-400w-1x.jpg 1x,
+                         ../dest/img/0-400w-2x.jpg 2x,">
+                <source media="(max-width: 800px)"
+                        srcset="
+                         ../dest/img/0-800w-1x.avif 1x,
+                         ../dest/img/0-800w-2x.avif 2x,
+                         ../dest/img/0-800w-1x.webp 1x,
+                         ../dest/img/0-800w-2x.webp 2x,
+                         ../dest/img/0-800w-1x.jpg 1x,
+                         ../dest/img/0-800w-2x.jpg 2x,">
+
+                <!-- <source srcset="../dest/img/0-400w.avif"
+                  type="image/avif"
+                  media="(max-width: 400px)" />
+          <source srcset="../dest/img/0-400w.webp"
+                  type="image/webp"
+                  media="(max-width: 400px)" />
+          <source srcset="../dest/img/0-400w.jpg"
+                  type="image/lpeg"
+                  media="(max-width: 400px)" />
+
+          <source srcset="../dest/img/0-800w.avif"
+                  type="image/avif"
+                  media="(max-width: 800px)" />
+          <source srcset="../dest/img/0-800w.webp"
+                  type="image/webp"
+                  media="(max-width: 800px)" />
+          <source srcset="../dest/img/0-800w.jpg"
+                  type="image/lpeg"
+                  media="(max-width: 800px)" />
+
+          <source srcset="../dest/img/0-1300w.avif"
+                  type="image/avif"
+                  media="(max-width: 1300px)" />
+          <source srcset="../dest/img/0-1300w.webp"
+                  type="image/webp"
+                  media="(max-width: 1300px)" />
+          <source srcset="../dest/img/0-1300w.jpg"
+                  type="image/lpeg"
+                  media="(max-width: 1300px)" />
+
+          <source srcset="../dest/img/0-2000w.avif"
+                  type="image/avif"
+                  media="(max-width: 2000px)" />
+          <source srcset="../dest/img/0-2000w.webp"
+                  type="image/webp"
+                  media="(max-width: 2000px)" />
+          <source srcset="../dest/img/0-2000w.jpg"
+                  type="image/lpeg"
+                  media="(max-width: 2000px)" />
+
+          <source srcset="../dest/img/0-3000w.avif"
+                  type="image/avif"
+                  media="(min-width: 2000px)" />
+          <source srcset="../dest/img/0-3000w.webp"
+                  type="image/webp"
+                  media="(min-width: 2000px)" />
+          <source srcset="../dest/img/0-3000w.jpg"
+                  type="image/lpeg"
+                  media="(min-width: 2000px)" /> -->
+
+                <img src="../dest/img/0-800w-2x.jpg"
+                     alt=""
+                     loading="eager"
+                     onload="loaded(this)"
+                     width="3000"
+                     height="1688" />
+        </picture>
+        <!-- <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, iusto doloremque dolore deserunt iure
+          dolorum id corrupti aliquam. Ex quo, iste rerum optio dolorum laborum ea ullam delectus modi veritatis
+          obcaecati soluta magni nemo debitis, eius dolores impedit culpa quae eaque aspernatur? Repudiandae corrupti
+          explicabo doloribus necessitatibus, obcaecati maiores unde. Nostrum corrupti iusto voluptatum sed, odit nam
+          enim explicabo! Tempore dolore a, suscipit sed animi ducimus facilis dolor quis non omnis? Eligendi hic
+          voluptas illum, perspiciatis distinctio porro modi labore repellat doloribus illo magni unde aperiam libero
+          non maiores deleniti reprehenderit nulla! Quos amet reprehenderit aliquid ex placeat possimus pariatur.
+     </p>
+     <picture class='placeholder'>
+
+          <source srcset="../dest/img/1-400w.avif"
+                  type="image/avif"
+                  media="(max-width: 400px)" />
+          <source srcset="../dest/img/1-400w.webp"
+                  type="image/webp"
+                  media="(max-width: 400px)" />
+          <source srcset="../dest/img/1-400w.jpg"
+                  type="image/lpeg"
+                  media="(max-width: 400px)" />
+
+
+          <source srcset="../dest/img/1-800w.avif"
+                  type="image/avif"
+                  media="(max-width: 800px)" />
+          <source srcset="../dest/img/1-800w.webp"
+                  type="image/webp"
+                  media="(max-width: 800px)" />
+          <source srcset="../dest/img/1-800w.jpg"
+                  type="image/lpeg"
+                  media="(max-width: 800px)" />
+
+
+          <source srcset="../dest/img/1-1300w.avif"
+                  type="image/avif"
+                  media="(max-width: 1300px)" />
+          <source srcset="../dest/img/1-1300w.webp"
+                  type="image/webp"
+                  media="(max-width: 1300px)" />
+          <source srcset="../dest/img/1-1300w.jpg"
+                  type="image/lpeg"
+                  media="(max-width: 1300px)" />
+
+
+          <source srcset="../dest/img/1-2000w.avif"
+                  type="image/avif"
+                  media="(max-width: 2000px)" />
+          <source srcset="../dest/img/1-2000w.webp"
+                  type="image/webp"
+                  media="(max-width: 2000px)" />
+          <source srcset="../dest/img/1-2000w.jpg"
+                  type="image/lpeg"
+                  media="(max-width: 2000px)" />
+
+
+          <source srcset="../dest/img/1-3000w.avif"
+                  type="image/avif"
+                  media="(min-width: 2000px)" />
+          <source srcset="../dest/img/1-3000w.webp"
+                  type="image/webp"
+                  media="(min-width: 2000px)" />
+          <source srcset="../dest/img/1-3000w.jpg"
+                  type="image/lpeg"
+                  media="(min-width: 2000px)" />
+
+          <img src=""
+               alt=""
+               loading="lazy"
+               onload="loaded(this)"
+               width="3000"
+               height="1688" />
+     </picture>
+     <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, iusto doloremque dolore deserunt iure
+          dolorum id corrupti aliquam. Ex quo, iste rerum optio dolorum laborum ea ullam delectus modi veritatis
+          obcaecati soluta magni nemo debitis, eius dolores impedit culpa quae eaque aspernatur? Repudiandae corrupti
+          explicabo doloribus necessitatibus, obcaecati maiores unde. Nostrum corrupti iusto voluptatum sed, odit nam
+          enim explicabo! Tempore dolore a, suscipit sed animi ducimus facilis dolor quis non omnis? Eligendi hic
+          voluptas illum, perspiciatis distinctio porro modi labore repellat doloribus illo magni unde aperiam libero
+          non maiores deleniti reprehenderit nulla! Quos amet reprehenderit aliquid ex placeat possimus pariatur.
+     </p>
+     <picture class='placeholder'>
+
+          <source srcset="../dest/img/2-400w.avif"
+                  type="image/avif"
+                  media="(max-width: 400px)" />
+          <source srcset="../dest/img/2-400w.webp"
+                  type="image/webp"
+                  media="(max-width: 400px)" />
+          <source srcset="../dest/img/2-400w.jpg"
+                  type="image/lpeg"
+                  media="(max-width: 400px)" />
+
+
+          <source srcset="../dest/img/2-800w.avif"
+                  type="image/avif"
+                  media="(max-width: 800px)" />
+          <source srcset="../dest/img/2-800w.webp"
+                  type="image/webp"
+                  media="(max-width: 800px)" />
+          <source srcset="../dest/img/2-800w.jpg"
+                  type="image/lpeg"
+                  media="(max-width: 800px)" />
+
+
+          <source srcset="../dest/img/2-1300w.avif"
+                  type="image/avif"
+                  media="(max-width: 1300px)" />
+          <source srcset="../dest/img/2-1300w.webp"
+                  type="image/webp"
+                  media="(max-width: 1300px)" />
+          <source srcset="../dest/img/2-1300w.jpg"
+                  type="image/lpeg"
+                  media="(max-width: 1300px)" />
+
+
+          <source srcset="../dest/img/2-2000w.avif"
+                  type="image/avif"
+                  media="(max-width: 2000px)" />
+          <source srcset="../dest/img/2-2000w.webp"
+                  type="image/webp"
+                  media="(max-width: 2000px)" />
+          <source srcset="../dest/img/2-2000w.jpg"
+                  type="image/lpeg"
+                  media="(max-width: 2000px)" />
+
+
+          <source srcset="../dest/img/2-3000w.avif"
+                  type="image/avif"
+                  media="(min-width: 2000px)" />
+          <source srcset="../dest/img/2-3000w.webp"
+                  type="image/webp"
+                  media="(min-width: 2000px)" />
+          <source srcset="../dest/img/2-3000w.jpg"
+                  type="image/lpeg"
+                  media="(min-width: 2000px)" />
+
+          <img src=""
+               alt=""
+               loading="lazy"
+               onload="loaded(this)"
+               width="3000"
+               height="1688" />
+     </picture>
+     <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, iusto doloremque dolore deserunt iure
+          dolorum id corrupti aliquam. Ex quo, iste rerum optio dolorum laborum ea ullam delectus modi veritatis
+          obcaecati soluta magni nemo debitis, eius dolores impedit culpa quae eaque aspernatur? Repudiandae corrupti
+          explicabo doloribus necessitatibus, obcaecati maiores unde. Nostrum corrupti iusto voluptatum sed, odit nam
+          enim explicabo! Tempore dolore a, suscipit sed animi ducimus facilis dolor quis non omnis? Eligendi hic
+          voluptas illum, perspiciatis distinctio porro modi labore repellat doloribus illo magni unde aperiam libero
+          non maiores deleniti reprehenderit nulla! Quos amet reprehenderit aliquid ex placeat possimus pariatur.
+     </p>
+     <picture class='placeholder'>
+
+          <source srcset="../dest/img/3-400w.avif"
+                  type="image/avif"
+                  media="(max-width: 400px)" />
+          <source srcset="../dest/img/3-400w.webp"
+                  type="image/webp"
+                  media="(max-width: 400px)" />
+          <source srcset="../dest/img/3-400w.jpg"
+                  type="image/lpeg"
+                  media="(max-width: 400px)" />
+
+
+          <source srcset="../dest/img/3-800w.avif"
+                  type="image/avif"
+                  media="(max-width: 800px)" />
+          <source srcset="../dest/img/3-800w.webp"
+                  type="image/webp"
+                  media="(max-width: 800px)" />
+          <source srcset="../dest/img/3-800w.jpg"
+                  type="image/lpeg"
+                  media="(max-width: 800px)" />
+
+
+          <source srcset="../dest/img/3-1300w.avif"
+                  type="image/avif"
+                  media="(max-width: 1300px)" />
+          <source srcset="../dest/img/3-1300w.webp"
+                  type="image/webp"
+                  media="(max-width: 1300px)" />
+          <source srcset="../dest/img/3-1300w.jpg"
+                  type="image/lpeg"
+                  media="(max-width: 1300px)" />
+
+
+          <source srcset="../dest/img/3-2000w.avif"
+                  type="image/avif"
+                  media="(max-width: 2000px)" />
+          <source srcset="../dest/img/3-2000w.webp"
+                  type="image/webp"
+                  media="(max-width: 2000px)" />
+          <source srcset="../dest/img/3-2000w.jpg"
+                  type="image/lpeg"
+                  media="(max-width: 2000px)" />
+
+
+          <source srcset="../dest/img/3-3000w.avif"
+                  type="image/avif"
+                  media="(min-width: 2000px)" />
+          <source srcset="../dest/img/3-3000w.webp"
+                  type="image/webp"
+                  media="(min-width: 2000px)" />
+          <source srcset="../dest/img/3-3000w.jpg"
+                  type="image/lpeg"
+                  media="(min-width: 2000px)" />
+
+          <img src=""
+               alt=""
+               loading="lazy"
+               onload="loaded(this)"
+               width="3000"
+               height="1688" />
+     </picture>
+     <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, iusto doloremque dolore deserunt iure
+          dolorum id corrupti aliquam. Ex quo, iste rerum optio dolorum laborum ea ullam delectus modi veritatis
+          obcaecati soluta magni nemo debitis, eius dolores impedit culpa quae eaque aspernatur? Repudiandae corrupti
+          explicabo doloribus necessitatibus, obcaecati maiores unde. Nostrum corrupti iusto voluptatum sed, odit nam
+          enim explicabo! Tempore dolore a, suscipit sed animi ducimus facilis dolor quis non omnis? Eligendi hic
+          voluptas illum, perspiciatis distinctio porro modi labore repellat doloribus illo magni unde aperiam libero
+          non maiores deleniti reprehenderit nulla! Quos amet reprehenderit aliquid ex placeat possimus pariatur.
+     </p>
+     <picture class='placeholder'>
+
+          <source srcset="../dest/img/4-400w.avif"
+                  type="image/avif"
+                  media="(max-width: 400px)" />
+          <source srcset="../dest/img/4-400w.webp"
+                  type="image/webp"
+                  media="(max-width: 400px)" />
+          <source srcset="../dest/img/4-400w.jpg"
+                  type="image/lpeg"
+                  media="(max-width: 400px)" />
+
+
+          <source srcset="../dest/img/4-800w.avif"
+                  type="image/avif"
+                  media="(max-width: 800px)" />
+          <source srcset="../dest/img/4-800w.webp"
+                  type="image/webp"
+                  media="(max-width: 800px)" />
+          <source srcset="../dest/img/4-800w.jpg"
+                  type="image/lpeg"
+                  media="(max-width: 800px)" />
+
+
+          <source srcset="../dest/img/4-1300w.avif"
+                  type="image/avif"
+                  media="(max-width: 1300px)" />
+          <source srcset="../dest/img/4-1300w.webp"
+                  type="image/webp"
+                  media="(max-width: 1300px)" />
+          <source srcset="../dest/img/4-1300w.jpg"
+                  type="image/lpeg"
+                  media="(max-width: 1300px)" />
+
+
+          <source srcset="../dest/img/4-2000w.avif"
+                  type="image/avif"
+                  media="(max-width: 2000px)" />
+          <source srcset="../dest/img/4-2000w.webp"
+                  type="image/webp"
+                  media="(max-width: 2000px)" />
+          <source srcset="../dest/img/4-2000w.jpg"
+                  type="image/lpeg"
+                  media="(max-width: 2000px)" />
+
+
+          <source srcset="../dest/img/4-3000w.avif"
+                  type="image/avif"
+                  media="(min-width: 2000px)" />
+          <source srcset="../dest/img/4-3000w.webp"
+                  type="image/webp"
+                  media="(min-width: 2000px)" />
+          <source srcset="../dest/img/4-3000w.jpg"
+                  type="image/lpeg"
+                  media="(min-width: 2000px)" />
+
+          <img src=""
+               alt=""
+               loading="lazy"
+               onload="loaded(this)"
+               width="3000"
+               height="1688" />
+     </picture>
+     <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, iusto doloremque dolore deserunt iure
+          dolorum id corrupti aliquam. Ex quo, iste rerum optio dolorum laborum ea ullam delectus modi veritatis
+          obcaecati soluta magni nemo debitis, eius dolores impedit culpa quae eaque aspernatur? Repudiandae corrupti
+          explicabo doloribus necessitatibus, obcaecati maiores unde. Nostrum corrupti iusto voluptatum sed, odit nam
+          enim explicabo! Tempore dolore a, suscipit sed animi ducimus facilis dolor quis non omnis? Eligendi hic
+          voluptas illum, perspiciatis distinctio porro modi labore repellat doloribus illo magni unde aperiam libero
+          non maiores deleniti reprehenderit nulla! Quos amet reprehenderit aliquid ex placeat possimus pariatur.
+     </p>
+     <picture class='placeholder'>
+
+          <source srcset="../dest/img/5-400w.avif"
+                  type="image/avif"
+                  media="(max-width: 400px)" />
+          <source srcset="../dest/img/5-400w.webp"
+                  type="image/webp"
+                  media="(max-width: 400px)" />
+          <source srcset="../dest/img/5-400w.jpg"
+                  type="image/lpeg"
+                  media="(max-width: 400px)" />
+
+
+          <source srcset="../dest/img/5-800w.avif"
+                  type="image/avif"
+                  media="(max-width: 800px)" />
+          <source srcset="../dest/img/5-800w.webp"
+                  type="image/webp"
+                  media="(max-width: 800px)" />
+          <source srcset="../dest/img/5-800w.jpg"
+                  type="image/lpeg"
+                  media="(max-width: 800px)" />
+
+
+          <source srcset="../dest/img/5-1300w.avif"
+                  type="image/avif"
+                  media="(max-width: 1300px)" />
+          <source srcset="../dest/img/5-1300w.webp"
+                  type="image/webp"
+                  media="(max-width: 1300px)" />
+          <source srcset="../dest/img/5-1300w.jpg"
+                  type="image/lpeg"
+                  media="(max-width: 1300px)" />
+
+
+          <source srcset="../dest/img/5-2000w.avif"
+                  type="image/avif"
+                  media="(max-width: 2000px)" />
+          <source srcset="../dest/img/5-2000w.webp"
+                  type="image/webp"
+                  media="(max-width: 2000px)" />
+          <source srcset="../dest/img/5-2000w.jpg"
+                  type="image/lpeg"
+                  media="(max-width: 2000px)" />
+
+
+          <source srcset="../dest/img/5-3000w.avif"
+                  type="image/avif"
+                  media="(min-width: 2000px)" />
+          <source srcset="../dest/img/5-3000w.webp"
+                  type="image/webp"
+                  media="(min-width: 2000px)" />
+          <source srcset="../dest/img/5-3000w.jpg"
+                  type="image/lpeg"
+                  media="(min-width: 2000px)" />
+
+          <img src=""
+               alt=""
+               loading="lazy"
+               onload="loaded(this)"
+               width="3000"
+               height="1688" />
+     </picture>
+     <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, iusto doloremque dolore deserunt iure
+          dolorum id corrupti aliquam. Ex quo, iste rerum optio dolorum laborum ea ullam delectus modi veritatis
+          obcaecati soluta magni nemo debitis, eius dolores impedit culpa quae eaque aspernatur? Repudiandae corrupti
+          explicabo doloribus necessitatibus, obcaecati maiores unde. Nostrum corrupti iusto voluptatum sed, odit nam
+          enim explicabo! Tempore dolore a, suscipit sed animi ducimus facilis dolor quis non omnis? Eligendi hic
+          voluptas illum, perspiciatis distinctio porro modi labore repellat doloribus illo magni unde aperiam libero
+          non maiores deleniti reprehenderit nulla! Quos amet reprehenderit aliquid ex placeat possimus pariatur.
+     </p>
+     <picture class='placeholder'>
+
+          <source srcset="../dest/img/6-400w.avif"
+                  type="image/avif"
+                  media="(max-width: 400px)" />
+          <source srcset="../dest/img/6-400w.webp"
+                  type="image/webp"
+                  media="(max-width: 400px)" />
+          <source srcset="../dest/img/6-400w.jpg"
+                  type="image/lpeg"
+                  media="(max-width: 400px)" />
+
+
+          <source srcset="../dest/img/6-800w.avif"
+                  type="image/avif"
+                  media="(max-width: 800px)" />
+          <source srcset="../dest/img/6-800w.webp"
+                  type="image/webp"
+                  media="(max-width: 800px)" />
+          <source srcset="../dest/img/6-800w.jpg"
+                  type="image/lpeg"
+                  media="(max-width: 800px)" />
+
+
+          <source srcset="../dest/img/6-1300w.avif"
+                  type="image/avif"
+                  media="(max-width: 1300px)" />
+          <source srcset="../dest/img/6-1300w.webp"
+                  type="image/webp"
+                  media="(max-width: 1300px)" />
+          <source srcset="../dest/img/6-1300w.jpg"
+                  type="image/lpeg"
+                  media="(max-width: 1300px)" />
+
+
+          <source srcset="../dest/img/6-2000w.avif"
+                  type="image/avif"
+                  media="(max-width: 2000px)" />
+          <source srcset="../dest/img/6-2000w.webp"
+                  type="image/webp"
+                  media="(max-width: 2000px)" />
+          <source srcset="../dest/img/6-2000w.jpg"
+                  type="image/lpeg"
+                  media="(max-width: 2000px)" />
+
+
+          <source srcset="../dest/img/6-3000w.avif"
+                  type="image/avif"
+                  media="(min-width: 2000px)" />
+          <source srcset="../dest/img/6-3000w.webp"
+                  type="image/webp"
+                  media="(min-width: 2000px)" />
+          <source srcset="../dest/img/6-3000w.jpg"
+                  type="image/lpeg"
+                  media="(min-width: 2000px)" />
+
+          <img src=""
+               alt=""
+               loading="lazy"
+               onload="loaded(this)"
+               width="3000"
+               height="1688" />
+     </picture>
+     <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, iusto doloremque dolore deserunt iure
+          dolorum id corrupti aliquam. Ex quo, iste rerum optio dolorum laborum ea ullam delectus modi veritatis
+          obcaecati soluta magni nemo debitis, eius dolores impedit culpa quae eaque aspernatur? Repudiandae corrupti
+          explicabo doloribus necessitatibus, obcaecati maiores unde. Nostrum corrupti iusto voluptatum sed, odit nam
+          enim explicabo! Tempore dolore a, suscipit sed animi ducimus facilis dolor quis non omnis? Eligendi hic
+          voluptas illum, perspiciatis distinctio porro modi labore repellat doloribus illo magni unde aperiam libero
+          non maiores deleniti reprehenderit nulla! Quos amet reprehenderit aliquid ex placeat possimus pariatur.
+     </p>
+     <picture class='placeholder'>
+          <source srcset="
+               ../dest/img/7-400w.avif 400w,
+               ../dest/img/7-800w.avif 800w,
+               ../dest/img/7-1300w.avif 1300w,
+               ../dest/img/7-2000w.avif 2000w,
+               ../dest/img/7-3000w.avif 3000w,
+               "
+                  type="image/avif" />
+
+          <source srcset="
+               ../dest/img/7-400w.webp 400w,
+               ../dest/img/7-800w.webp 800w,
+               ../dest/img/7-1300w.webp 1300w,
+               ../dest/img/7-2000w.webp 2000w,
+               ../dest/img/7-3000w.webp 3000w,
+               "
+                  type="image/webp" />
+
+          <img srcset="
+               ../dest/img/7-400w.jpg 400w,
+               ../dest/img/7-800w.jpg 800w,
+               ../dest/img/7-1300w.jpg 1300w,
+               ../dest/img/7-2000w.jpg 2000w,
+               ../dest/img/7-3000w.jpg 3000w,"
+               src=""
+               alt=""
+               loading="lazy"
+               onload="loaded(this)"
+               width="3000"
+               height="1688" />
+     </picture>
+     <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, iusto doloremque dolore deserunt iure
+          dolorum id corrupti aliquam. Ex quo, iste rerum optio dolorum laborum ea ullam delectus modi veritatis
+          obcaecati soluta magni nemo debitis, eius dolores impedit culpa quae eaque aspernatur? Repudiandae corrupti
+          explicabo doloribus necessitatibus, obcaecati maiores unde. Nostrum corrupti iusto voluptatum sed, odit nam
+          enim explicabo! Tempore dolore a, suscipit sed animi ducimus facilis dolor quis non omnis? Eligendi hic
+          voluptas illum, perspiciatis distinctio porro modi labore repellat doloribus illo magni unde aperiam libero
+          non maiores deleniti reprehenderit nulla! Quos amet reprehenderit aliquid ex placeat possimus pariatur.
+     </p>
+     <picture class='placeholder'>
+          <source srcset="
+               ../dest/img/8-400w.avif 400w,
+               ../dest/img/8-800w.avif 800w,
+               ../dest/img/8-1300w.avif 1300w,
+               ../dest/img/8-2000w.avif 2000w,
+               ../dest/img/8-3000w.avif 3000w,
+               "
+                  type="image/avif" />
+
+          <source srcset="
+               ../dest/img/8-400w.webp 400w,
+               ../dest/img/8-800w.webp 800w,
+               ../dest/img/8-1300w.webp 1300w,
+               ../dest/img/8-2000w.webp 2000w,
+               ../dest/img/8-3000w.webp 3000w,
+               "
+                  type="image/webp" />
+
+          <img srcset="
+               ../dest/img/8-400w.jpg 400w,
+               ../dest/img/8-800w.jpg 800w,
+               ../dest/img/8-1300w.jpg 1300w,
+               ../dest/img/8-2000w.jpg 2000w,
+               ../dest/img/8-3000w.jpg 3000w,"
+               src=""
+               alt=""
+               loading="lazy"
+               onload="loaded(this)"
+               width="3000"
+               height="1688" />
+     </picture>
+     <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, iusto doloremque dolore deserunt iure
+          dolorum id corrupti aliquam. Ex quo, iste rerum optio dolorum laborum ea ullam delectus modi veritatis
+          obcaecati soluta magni nemo debitis, eius dolores impedit culpa quae eaque aspernatur? Repudiandae corrupti
+          explicabo doloribus necessitatibus, obcaecati maiores unde. Nostrum corrupti iusto voluptatum sed, odit nam
+          enim explicabo! Tempore dolore a, suscipit sed animi ducimus facilis dolor quis non omnis? Eligendi hic
+          voluptas illum, perspiciatis distinctio porro modi labore repellat doloribus illo magni unde aperiam libero
+          non maiores deleniti reprehenderit nulla! Quos amet reprehenderit aliquid ex placeat possimus pariatur.
+     </p>
+     <picture class='placeholder'>
+          <source srcset="
+               ../dest/img/9-400w.avif 400w,
+               ../dest/img/9-800w.avif 800w,
+               ../dest/img/9-1300w.avif 1300w,
+               ../dest/img/9-2000w.avif 2000w,
+               ../dest/img/9-3000w.avif 3000w,
+               "
+                  type="image/avif" />
+
+          <source srcset="
+               ../dest/img/9-400w.webp 400w,
+               ../dest/img/9-800w.webp 800w,
+               ../dest/img/9-1300w.webp 1300w,
+               ../dest/img/9-2000w.webp 2000w,
+               ../dest/img/9-3000w.webp 3000w,
+               "
+                  type="image/webp" />
+
+          <img srcset="
+               ../dest/img/9-400w.jpg 400w,
+               ../dest/img/9-800w.jpg 800w,
+               ../dest/img/9-1300w.jpg 1300w,
+               ../dest/img/9-2000w.jpg 2000w,
+               ../dest/img/9-3000w.jpg 3000w,"
+               src=""
+               alt=""
+               loading="lazy"
+               onload="loaded(this)"
+               width="3000"
+               height="1688" />
+     </picture>
+     <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, iusto doloremque dolore deserunt iure
+          dolorum id corrupti aliquam. Ex quo, iste rerum optio dolorum laborum ea ullam delectus modi veritatis
+          obcaecati soluta magni nemo debitis, eius dolores impedit culpa quae eaque aspernatur? Repudiandae corrupti
+          explicabo doloribus necessitatibus, obcaecati maiores unde. Nostrum corrupti iusto voluptatum sed, odit nam
+          enim explicabo! Tempore dolore a, suscipit sed animi ducimus facilis dolor quis non omnis? Eligendi hic
+          voluptas illum, perspiciatis distinctio porro modi labore repellat doloribus illo magni unde aperiam libero
+          non maiores deleniti reprehenderit nulla! Quos amet reprehenderit aliquid ex placeat possimus pariatur.
+     </p>
+     <picture class='placeholder'>
+          <source srcset="
+               ../dest/img/10-400w.avif 400w,
+               ../dest/img/10-800w.avif 800w,
+               ../dest/img/10-1300w.avif 1300w,
+               ../dest/img/10-2000w.avif 2000w,
+               ../dest/img/10-3000w.avif 3000w,
+               "
+                  type="image/avif" />
+
+          <source srcset="
+               ../dest/img/10-400w.webp 400w,
+               ../dest/img/10-800w.webp 800w,
+               ../dest/img/10-1300w.webp 1300w,
+               ../dest/img/10-2000w.webp 2000w,
+               ../dest/img/10-3000w.webp 3000w,
+               "
+                  type="image/webp" />
+
+          <img srcset="
+               ../dest/img/10-400w.jpg 400w,
+               ../dest/img/10-800w.jpg 800w,
+               ../dest/img/10-1300w.jpg 1300w,
+               ../dest/img/10-2000w.jpg 2000w,
+               ../dest/img/10-3000w.jpg 3000w,"
+               src=""
+               alt=""
+               loading="lazy"
+               onload="loaded(this)"
+               width="3000"
+               height="1688" />
+     </picture>
+     <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, iusto doloremque dolore deserunt iure
+          dolorum id corrupti aliquam. Ex quo, iste rerum optio dolorum laborum ea ullam delectus modi veritatis
+          obcaecati soluta magni nemo debitis, eius dolores impedit culpa quae eaque aspernatur? Repudiandae corrupti
+          explicabo doloribus necessitatibus, obcaecati maiores unde. Nostrum corrupti iusto voluptatum sed, odit nam
+          enim explicabo! Tempore dolore a, suscipit sed animi ducimus facilis dolor quis non omnis? Eligendi hic
+          voluptas illum, perspiciatis distinctio porro modi labore repellat doloribus illo magni unde aperiam libero
+          non maiores deleniti reprehenderit nulla! Quos amet reprehenderit aliquid ex placeat possimus pariatur.
+     </p>
+     <picture class='placeholder'>
+          <source srcset="
+               ../dest/img/11-400w.avif 400w,
+               ../dest/img/11-800w.avif 800w,
+               ../dest/img/11-1300w.avif 1300w,
+               ../dest/img/11-2000w.avif 2000w,
+               ../dest/img/11-3000w.avif 3000w,
+               "
+                  type="image/avif" />
+
+          <source srcset="
+               ../dest/img/11-400w.webp 400w,
+               ../dest/img/11-800w.webp 800w,
+               ../dest/img/11-1300w.webp 1300w,
+               ../dest/img/11-2000w.webp 2000w,
+               ../dest/img/11-3000w.webp 3000w,
+               "
+                  type="image/webp" />
+
+          <img srcset="
+               ../dest/img/11-400w.jpg 400w,
+               ../dest/img/11-800w.jpg 800w,
+               ../dest/img/11-1300w.jpg 1300w,
+               ../dest/img/11-2000w.jpg 2000w,
+               ../dest/img/11-3000w.jpg 3000w,"
+               src=""
+               alt=""
+               loading="lazy"
+               onload="loaded(this)"
+               width="3000"
+               height="1688" />
+     </picture>
+     <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, iusto doloremque dolore deserunt iure
+          dolorum id corrupti aliquam. Ex quo, iste rerum optio dolorum laborum ea ullam delectus modi veritatis
+          obcaecati soluta magni nemo debitis, eius dolores impedit culpa quae eaque aspernatur? Repudiandae corrupti
+          explicabo doloribus necessitatibus, obcaecati maiores unde. Nostrum corrupti iusto voluptatum sed, odit nam
+          enim explicabo! Tempore dolore a, suscipit sed animi ducimus facilis dolor quis non omnis? Eligendi hic
+          voluptas illum, perspiciatis distinctio porro modi labore repellat doloribus illo magni unde aperiam libero
+          non maiores deleniti reprehenderit nulla! Quos amet reprehenderit aliquid ex placeat possimus pariatur.
+     </p>
+     <picture class='placeholder'>
+          <source srcset="
+               ../dest/img/12-400w.avif 400w,
+               ../dest/img/12-800w.avif 800w,
+               ../dest/img/12-1300w.avif 1300w,
+               ../dest/img/12-2000w.avif 2000w,
+               ../dest/img/12-3000w.avif 3000w,
+               "
+                  type="image/avif" />
+
+          <source srcset="
+               ../dest/img/12-400w.webp 400w,
+               ../dest/img/12-800w.webp 800w,
+               ../dest/img/12-1300w.webp 1300w,
+               ../dest/img/12-2000w.webp 2000w,
+               ../dest/img/12-3000w.webp 3000w,
+               "
+                  type="image/webp" />
+
+          <img srcset="
+               ../dest/img/12-400w.jpg 400w,
+               ../dest/img/12-800w.jpg 800w,
+               ../dest/img/12-1300w.jpg 1300w,
+               ../dest/img/12-2000w.jpg 2000w,
+               ../dest/img/12-3000w.jpg 3000w,"
+               src=""
+               alt=""
+               loading="lazy"
+               onload="loaded(this)"
+               width="3000"
+               height="1688" />
+     </picture> -->
+</body>
+
+</html>
