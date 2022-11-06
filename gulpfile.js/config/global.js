@@ -2,6 +2,7 @@ global = {
     //tasks
     clear: require('../tasks/clear.js'),
     css: require('../tasks/css.js'),
+    scss: require('../tasks/scss.js'),
     script: require('../tasks/script.js'),
     html: require('../tasks/html.js'),
     img: {
@@ -39,6 +40,7 @@ global = {
     cssimport: require('gulp-cssimport'),
     autoprefixer: require('gulp-autoprefixer'),
     csso: require('gulp-csso'),
+    sass: require('gulp-sass')(require('sass')),
     rename: require('gulp-rename'),
     groupCssMediaQueries: require('gulp-group-css-media-queries'),
     newer: require('gulp-newer'),

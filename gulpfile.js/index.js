@@ -4,6 +4,7 @@ const glob = require('./config/global.js');
 // individual run
 exports.clear = global.clear;
 exports.css = global.css;
+exports.scss = global.scss;
 exports.script = global.script;
 exports.html = global.html;
 exports.check = global.check;
@@ -28,7 +29,7 @@ exports.fonts = global.gulp.series(
 exports.dev = global.gulp.series(
     global.clear,
     global.html,
-    global.css,
+    global.scss,
     global.script,
     this.image,
     this.fonts,

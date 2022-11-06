@@ -1,0 +1,202 @@
+header {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+
+    .nav-bar {
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr;
+        justify-items: center;
+        align-items: center;
+        background-color: var(--bg-main);
+        @include adaptivePadding(10, 135, 10, 135, 10);
+        box-shadow: 0 0 5px rgba(38, 50, 56, 0.16);
+
+        .burger {
+            display: none;
+        }
+
+        .logo {
+            display: grid;
+            grid-template-columns: 0.1fr 1fr;
+            justify-items: center;
+            align-items: center;
+            text-decoration: none;
+
+            img {
+                max-width: 7rem;
+                margin-left: -6rem;
+
+            }
+
+            h2 {
+                color: var(--text-color-black);
+                font-weight: 600;
+                font-size: 4.8rem;
+                margin-left: -0.5rem;
+            }
+        }
+
+        .links {
+            display: grid;
+            grid-template-columns: repeat(7, auto);
+            justify-content: space-around;
+            align-items: center;
+            list-style: none;
+
+            li a {
+                text-decoration: none;
+                padding: 1px;
+                color: var(--text-color-purple);
+                font-weight: 400;
+                font-size: 1.8rem;
+                white-space: nowrap;
+                transition-duration: 0.3s;
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            }
+
+            li a.active {
+                color: var(--text-color-black);
+            }
+        }
+
+        .dot {
+            position: relative;
+            @include adaptivePadding(30, 30, 30, 30, 2);
+
+            &:before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                margin: auto;
+                width: 0.5rem;
+                height: 0.5rem;
+                border-radius: 50%;
+                background-color: #FDCB6E;
+            }
+        }
+
+        .btn {
+            justify-self: end;
+        }
+    }
+}
+
+@media (min-width:1450px) {
+    .nav-bar {
+        border-radius: 3rem 3rem 0 0;
+
+        // ::before needs for making background matched to body
+        // because header { position:sticky} can not be used with parent(container){ overflow:hidden}
+        // also if dont create before element mobile menu will be wisible in corners
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: var(--bg-body);
+            z-index: -1;
+        }
+    }
+}
+
+@media (max-width:425px) {
+    header {
+
+        .nav-bar {
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: space-between;
+
+            .burger {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                list-style: none;
+                width: 12px;
+                height: 12px;
+                margin-right: 3vw;
+
+                li {
+                    width: 100%;
+                    height: 1.3px;
+                    background-color: var(--text-color-black);
+                    transition-duration: .15s;
+                }
+
+                &.active li:nth-child(1) {
+                    transform: translateY(235%) rotate(45deg);
+                }
+
+                &.active li:nth-child(2) {
+                    display: none;
+                }
+
+                &.active li:nth-child(3) {
+                    transform: translateY(-235%) rotate(-45deg);
+                }
+            }
+
+            .logo {
+                margin-right: auto;
+
+                img {
+                    display: none;
+                }
+            }
+
+            .links {
+                position: absolute;
+                z-index: -2;
+                top: -100vh;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background-color: var(--bg-main);
+                display: list-item;
+                padding: 11.5rem 0 0 0;
+                margin: 0;
+                transition-duration: 0.5s;
+
+                &.active {
+                    transform: translateY(100vh);
+                }
+
+                li {
+                    box-sizing: border-box;
+                    margin: 2rem;
+
+                    a {
+                        display: block;
+                        font-size: 3.5rem;
+                        padding: 0.6em;
+                        width: inherit;
+                        background-color: var(--bg-btn);
+                        color: var(--text-color-white);
+                        border-radius: 2rem;
+
+
+                        &:hover {
+                            transform: scale(1);
+                            box-shadow: var(--btn-box-shadow-hover);
+                        }
+
+                        &:active {
+                            box-shadow: var(--btn-box-shadow-active);
+                        }
+                    }
+
+                }
+            }
+
+            .dot {
+                display: none;
+            }
+
+            .btn {
+                margin-left: auto;
+                font-size: 3rem;
+                border-radius: 0.5em;
+                padding: 0.5em 2.2em;
+            }
+        }
+    }
+}

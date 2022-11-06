@@ -3,7 +3,7 @@ const fontFace = () => {
     return global.gulp.src(global.path.fonts.srcForFontface)
         .pipe(global.fontfaceGen({
             filepath: global.path.fonts.destFontFace,
-            filename: "fonts.css",
+            filename: "fonts.scss",
             destpath: "../fonts",
         }))
 }

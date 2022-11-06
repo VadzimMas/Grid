@@ -1,0 +1,391 @@
+.section-1.desktop {
+    margin: 0 auto;
+    position: relative;
+    padding: 4rem 6rem;
+    overflow: hidden;
+    z-index: 1;
+    @include adaptivePadding(100, 135, 100, 135, 10);
+
+    .bg-img {
+        position: absolute;
+        inset: 0;
+        background-color: var(--bg-main);
+        z-index: -1;
+
+        img:nth-child(1) {
+            position: absolute;
+            top: 2%;
+            right: 0;
+            width: 29rem;
+        }
+
+        img:nth-child(2) {
+            position: absolute;
+            top: -5%;
+            right: 0;
+            width: 145rem;
+
+        }
+
+    }
+
+    .title {
+        @include adaptiveMargin(0, 0, 70, 0, 5);
+        font-weight: 800;
+        line-height: 10rem;
+
+        h1 {
+            font-size: 9.6rem;
+            text-shadow: 0px 4px 0px #FFFFFF;
+
+            span {
+                position: relative;
+                color: var(--text-color-red);
+
+                img {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 19rem;
+                    z-index: -1;
+                }
+            }
+        }
+
+        h2 {
+            font-size: 6.4rem;
+        }
+    }
+
+    .tiles {
+        display: grid;
+        grid-template-columns:
+            adaptiveWidth(270, 60) adaptiveWidth(270, 60) adaptiveWidth(170, 50) adaptiveWidth(170, 50) adaptiveWidth(170, 50);
+        grid-template-rows:
+            adaptiveHeight(30, 10) adaptiveHeight(30, 10) 0 adaptiveHeight(220, 58) adaptiveHeight(185, 28) adaptiveHeight(70, 25) adaptiveHeight(10, 38);
+        grid-gap: adaptiveWidth(30, 8);
+        grid-template-areas:
+            't-1 t-4 t-4 ... ...'
+            '... t-4 t-4 t-7 t-7'
+            't-2 t-4 t-4 ... ...'
+            't-2 t-4 t-4 t-8 t-9'
+            't-2 t-5 t-6 t-6 t-10'
+            't-3 t-5 t-6 t-6 t-10'
+            '... ... t-6 t-6 ...'
+        ;
+
+        .t-1 {
+            grid-area: t-1;
+            font-weight: 400;
+            font-size: 1.7rem;
+            @include adaptiveLineHeight(35, 2);
+            text-align: left;
+        }
+
+        .t-2 {
+            grid-area: t-2;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .t-3 {
+            grid-area: t-3;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            display: grid;
+            align-items: center;
+        }
+
+        .t-4 {
+            grid-area: t-4;
+            overflow: hidden;
+            border-radius: 2rem;
+
+            img {
+                width: 100%;
+                height: auto;
+                transform: translateY(1%) scale(1.02);
+            }
+        }
+
+        .t-5 {
+            grid-area: t-5;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .t-6 {
+            grid-area: t-6;
+            border-radius: 2rem;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .t-7 {
+            grid-area: t-7;
+            width: 100%;
+            font-weight: 400;
+            font-size: 1.7rem;
+            @include adaptiveLineHeight(35, 2);
+            text-align: left;
+        }
+
+        .t-8 {
+            grid-area: t-8;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .t-9 {
+            grid-area: t-9;
+
+            img {
+                width: 100%;
+                height: 100%;
+                transform: translate(0, 2%);
+                scale: 1.04;
+            }
+        }
+
+        .t-10 {
+            grid-area: t-10;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+.section-1.mobile {
+    margin: 0 auto;
+    position: relative;
+    padding: 4rem 6rem;
+    overflow: hidden;
+    z-index: 1;
+    @include adaptivePadding(100, 135, 100, 135, 10);
+
+    .bg-img {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+
+        img:nth-child(1) {
+            position: absolute;
+            top: 2%;
+            right: 0;
+            width: adaptiveWidth(300, 100);
+            z-index: 1;
+        }
+
+        img:nth-child(2) {
+            position: absolute;
+            top: adaptiveTop(0, -50);
+            right: 0;
+            width: adaptiveWidth(500, 250);
+            z-index: 0;
+        }
+
+        img:nth-child(3) {
+            position: absolute;
+            top: adaptiveTop(270, 165);
+            transform: translate(0, -80%);
+            right: 0;
+            width: 100%;
+            z-index: -1;
+        }
+    }
+
+    .title {
+        @include adaptiveMargin(0, 0, 70, 0, 5);
+
+        h1 {
+            width: adaptiveWidth(600, 200);
+            margin: 0.3em auto;
+            font-weight: 900;
+            font-size: 9.6rem;
+            line-height: 9rem;
+            text-shadow: 0px 4px 0px #FFFFFF;
+
+            span:nth-child(1) {
+                font-weight: 600;
+                line-height: 10rem;
+                font-size: 7rem;
+                position: relative;
+                color: var(--text-color-red);
+                display: inline-block;
+
+                img {
+                    position: absolute;
+                    left: 1%;
+                    bottom: 5%;
+                    width: 100%;
+                    scale: 1.1;
+                    z-index: -1;
+                }
+            }
+
+            span:nth-child(2) {
+                font-weight: 600;
+                line-height: 10rem;
+                font-size: 7rem;
+                position: relative;
+                color: var(--text-color-black);
+                display: inline-block;
+            }
+        }
+
+        h2 {
+            width: adaptiveWidth(500, 200);
+            margin: 0 auto 1em auto;
+            font-weight: 600;
+            font-size: 3.5rem;
+            line-height: 6rem;
+        }
+
+        img {
+            margin: 0 auto;
+        }
+    }
+
+    .tiles {
+        background-color: red;
+        display: grid;
+        grid-template-columns:
+            adaptiveWidth(270, 60) adaptiveWidth(270, 60) adaptiveWidth(170, 50) adaptiveWidth(170, 50) adaptiveWidth(170, 50);
+        grid-template-rows:
+            adaptiveHeight(30, 10) adaptiveHeight(30, 10) 0 adaptiveHeight(220, 58) adaptiveHeight(185, 28) adaptiveHeight(70, 25) adaptiveHeight(10, 38);
+        grid-gap: adaptiveWidth(30, 8);
+        grid-template-areas:
+            't-1 t-4 t-4 ... ...'
+            '... t-4 t-4 t-7 t-7'
+            't-2 t-4 t-4 ... ...'
+            't-2 t-4 t-4 t-8 t-9'
+            't-2 t-5 t-6 t-6 t-10'
+            't-3 t-5 t-6 t-6 t-10'
+            '... ... t-6 t-6 ...'
+        ;
+
+        .t-1 {
+            grid-area: t-1;
+            font-weight: 400;
+            font-size: 1.7rem;
+            @include adaptiveLineHeight(35, 2);
+            text-align: left;
+        }
+
+        .t-2 {
+            grid-area: t-2;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .t-3 {
+            grid-area: t-3;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            display: grid;
+            align-items: center;
+        }
+
+        .t-4 {
+            grid-area: t-4;
+            overflow: hidden;
+            border-radius: 2rem;
+
+            img {
+                width: 100%;
+                height: auto;
+                transform: translateY(1%) scale(1.02);
+            }
+        }
+
+        .t-5 {
+            grid-area: t-5;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .t-6 {
+            grid-area: t-6;
+            border-radius: 2rem;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .t-7 {
+            grid-area: t-7;
+            width: 100%;
+            font-weight: 400;
+            font-size: 1.7rem;
+            @include adaptiveLineHeight(35, 2);
+            text-align: left;
+        }
+
+        .t-8 {
+            grid-area: t-8;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .t-9 {
+            grid-area: t-9;
+
+            img {
+                width: 100%;
+                height: 100%;
+                transform: translate(0, 2%);
+                scale: 1.04;
+            }
+        }
+
+        .t-10 {
+            grid-area: t-10;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+
+@media (max-width:768px) {
+    .section-1.desktop {
+        display: none;
+    }
+
+    .section-1.mobile {
+        display: block;
+    }
+}

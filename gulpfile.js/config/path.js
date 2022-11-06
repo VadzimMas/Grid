@@ -11,9 +11,9 @@ module.exports = {
         dest: pathDest,
     },
 
-    css: {
-        src: pathSrc + '/css/*.css',
-        watch: pathSrc + '/css/**/*.css',
+    scss: {
+        src: pathSrc + '/scss/*.scss',
+        watch: pathSrc + '/scss/**/*.scss',
         dest: pathDest + '/css',
     },
 
@@ -29,8 +29,8 @@ module.exports = {
         specificSrc: [
             pathSrc + '/img/**/*.{jpg,jpeg,png,webp,avif,gif,!svg}',
             '!' + pathSrc + '/img/**/*{-1x,-2x}.*',
-            '!' + pathSrc + '/img/**/ico/*',
-            '!' + pathSrc + '/img/**/svg/*'
+            '!' + pathSrc + '/img/**/ico/**/*.*',
+            '!' + pathSrc + '/img/**/svg/**/*.*'
         ],
         watch: pathSrc + '/img/**/*.{jpg,jpeg,png,webp,avif,gif,svg}',
         destToDest: pathDest + '/img',
@@ -44,6 +44,6 @@ module.exports = {
         watch: pathSrc + '/fonts/**/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}',
         destFromDest: pathDest + '/fonts',
         destFromSrc: pathSrc + '/fonts',
-        destFontFace: pathSrc + '/css/blocks',
+        destFontFace: pathSrc + '/scss/blocks',
     }
 }
