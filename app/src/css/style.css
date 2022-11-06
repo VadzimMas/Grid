@@ -1,9 +1,14 @@
-@import url('fonts.css');
+@import url('blocks/fonts.css');
+@import url('blocks/btn-1.css');
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+img {
+    display: block;
 }
 
 :root {
@@ -33,6 +38,9 @@ body {
     max-width: 1440px;
     border-radius: 10px;
     margin: 0 auto;
+    background-color: #fff;
+    text-align: center;
 }
 
 @import url('blocks/0-nav-bar.css');
+@import url('blocks/1-section-1.css');

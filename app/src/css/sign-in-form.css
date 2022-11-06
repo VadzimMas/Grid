@@ -1,0 +1,38 @@
+body {
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-in-form {
+    width: clamp(300px, 50vw, 400px);
+    border-radius: 0.5rem;
+    background-color: antiquewhite;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.sign-in-form h1 {
+    color: black;
+}
+
+
+.sign-in-form div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.sign-in-form div label {
+    align-self: center;
+}
+
+.sign-in-form div input {
+    width: 60%;
+    height: 30px;
+}
+
+.sign-in-form div input[type='submit'] {
+    margin: 0 auto;
+}

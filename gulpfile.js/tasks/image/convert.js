@@ -26,30 +26,30 @@ function convert() {
                     // sharp: { failOnError: false, density: 800 },
                     rename: { suffix: "-400w-2x" }
                 },
-                // {
-                //     width: 400,
-                //     format: "avif",
-                //     // sharp: { failOnError: false, density: 400 },
-                //     rename: { suffix: "-400w-1x" }
-                // },
-                // {
-                //     width: 800,
-                //     format: "avif",
-                //     // sharp: { failOnError: false, density: 800 },
-                //     rename: { suffix: "-400w-2x" }
-                // },
-                // {
-                //     width: 400,
-                //     format: "jpeg",
-                //     // sharp: { failOnError: false, density: 400 },
-                //     rename: { suffix: "-400w-1x" }
-                // },
-                // {
-                //     width: 800,
-                //     format: "jpeg",
-                //     // sharp: { failOnError: false, density: 800 },
-                //     rename: { suffix: "-400w-2x" }
-                // },
+                {
+                    width: 400,
+                    format: "avif",
+                    // sharp: { failOnError: false, density: 400 },
+                    rename: { suffix: "-400w-1x" }
+                },
+                {
+                    width: 800,
+                    format: "avif",
+                    // sharp: { failOnError: false, density: 800 },
+                    rename: { suffix: "-400w-2x" }
+                },
+                {
+                    width: 400,
+                    format: "jpeg",
+                    // sharp: { failOnError: false, density: 400 },
+                    rename: { suffix: "-400w-1x" }
+                },
+                {
+                    width: 800,
+                    format: "jpeg",
+                    // sharp: { failOnError: false, density: 800 },
+                    rename: { suffix: "-400w-2x" }
+                },
 
 
                 // {

@@ -12,7 +12,7 @@ module.exports = {
     },
 
     css: {
-        src: pathSrc + '/css/style.css',
+        src: pathSrc + '/css/*.css',
         watch: pathSrc + '/css/**/*.css',
         dest: pathDest + '/css',
     },
@@ -44,6 +44,6 @@ module.exports = {
         watch: pathSrc + '/fonts/**/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}',
         destFromDest: pathDest + '/fonts',
         destFromSrc: pathSrc + '/fonts',
-        destFontFace: pathSrc + '/css',
+        destFontFace: pathSrc + '/css/blocks',
     }
 }
