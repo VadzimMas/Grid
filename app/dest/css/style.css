@@ -317,7 +317,6 @@ header .nav-bar .btn {
 .section-1.desktop {
   margin: 0 auto;
   position: relative;
-  padding: 4rem 6rem;
   overflow: hidden;
   z-index: 1;
   padding-top: clamp(10px,
@@ -521,21 +520,14 @@ header .nav-bar .btn {
   display: none;
   margin: 0 auto;
   position: relative;
-  padding: 4rem 6rem;
   overflow: hidden;
   z-index: 1;
   padding-top: clamp(10px,
       calc((((90) * ((100vw - 320px) * 100) / (1120)) / 100) + 10px),
       100px);
-  padding-right: clamp(10px,
-      calc((((125) * ((100vw - 320px) * 100) / (1120)) / 100) + 10px),
-      135px);
   padding-bottom: clamp(10px,
       calc((((90) * ((100vw - 320px) * 100) / (1120)) / 100) + 10px),
       100px);
-  padding-left: clamp(10px,
-      calc((((125) * ((100vw - 320px) * 100) / (1120)) / 100) + 10px),
-      135px);
 }
 
 .section-1.mobile .bg-img {
@@ -638,74 +630,78 @@ header .nav-bar .btn {
 .section-1.mobile .tiles {
   background-color: red;
   display: grid;
-  grid-template-columns: clamp(60px,
-    calc((((210) * ((100vw - 320px) * 100) / (1120)) / 100) + 60px),
-    270px) clamp(60px,
-    calc((((210) * ((100vw - 320px) * 100) / (1120)) / 100) + 60px),
-    270px) clamp(50px,
-    calc((((120) * ((100vw - 320px) * 100) / (1120)) / 100) + 50px),
-    170px) clamp(50px,
-    calc((((120) * ((100vw - 320px) * 100) / (1120)) / 100) + 50px),
-    170px) clamp(50px,
-    calc((((120) * ((100vw - 320px) * 100) / (1120)) / 100) + 50px),
-    170px);
+  grid-template-columns: clamp(50px,
+    calc((((174) * ((100vw - 320px) * 100) / (1120)) / 100) + 50px),
+    224px) clamp(50px,
+    calc((((570) * ((100vw - 320px) * 100) / (1120)) / 100) + 50px),
+    620px) clamp(30px,
+    calc((((427) * ((100vw - 320px) * 100) / (1120)) / 100) + 30px),
+    457px) clamp(50px,
+    calc((((50) * ((100vw - 320px) * 100) / (1120)) / 100) + 50px),
+    100px) clamp(33px,
+    calc((((0) * ((100vw - 320px) * 100) / (1120)) / 100) + 33px),
+    33px);
   grid-template-rows: clamp(10px,
-    calc((((20) * ((100vw - 320px) * 100) / (1120)) / 100) + 10px),
-    30px) clamp(10px,
-    calc((((20) * ((100vw - 320px) * 100) / (1120)) / 100) + 10px),
-    30px) 0 clamp(58px,
-    calc((((162) * ((100vw - 320px) * 100) / (1120)) / 100) + 58px),
-    220px) clamp(28px,
-    calc((((157) * ((100vw - 320px) * 100) / (1120)) / 100) + 28px),
-    185px) clamp(25px,
-    calc((((45) * ((100vw - 320px) * 100) / (1120)) / 100) + 25px),
-    70px) clamp(38px,
-    calc((((-28) * ((100vw - 320px) * 100) / (1120)) / 100) + 38px),
-    10px);
+    calc((((240) * ((100vw - 320px) * 100) / (1120)) / 100) + 10px),
+    250px) clamp(10px,
+    calc((((10) * ((100vw - 320px) * 100) / (1120)) / 100) + 10px),
+    20px) clamp(58px,
+    calc((((482) * ((100vw - 320px) * 100) / (1120)) / 100) + 58px),
+    540px) clamp(25px,
+    calc((((405) * ((100vw - 320px) * 100) / (1120)) / 100) + 25px),
+    430px) clamp(38px,
+    calc((((126) * ((100vw - 320px) * 100) / (1120)) / 100) + 38px),
+    164px) clamp(38px,
+    calc((((188) * ((100vw - 320px) * 100) / (1120)) / 100) + 38px),
+    226px) clamp(40px,
+    calc((((0) * ((100vw - 320px) * 100) / (1120)) / 100) + 40px),
+    40px) clamp(40px,
+    calc((((210) * ((100vw - 320px) * 100) / (1120)) / 100) + 40px),
+    250px);
   grid-gap: clamp(8px,
     calc((((22) * ((100vw - 320px) * 100) / (1120)) / 100) + 8px),
     30px);
-  grid-template-areas: "t-1 t-4 t-4 ... ..." "... t-4 t-4 t-7 t-7" "t-2 t-4 t-4 ... ..." "t-2 t-4 t-4 t-8 t-9" "t-2 t-5 t-6 t-6 t-10" "t-3 t-5 t-6 t-6 t-10" "... ... t-6 t-6 ...";
+  grid-template-areas: "... t-3 t-3 ... ..." "t-1 t-3 t-3 ... ..." "t-1 t-3 t-3 t-6 t-6" "t-1 t-4 t-7 t-7 t-7" "t-2 ... ... ... ..." "t-2 t-5 ... ... ..." "... ... t-8 t-8 ..." "... ... ... ... ...";
 }
 
 .section-1.mobile .tiles .t-1 {
   grid-area: t-1;
-  font-weight: 400;
-  font-size: 1.7rem;
-  line-height: clamp(2px,
-    calc((((33) * ((100vw - 320px) * 100) / (1120)) / 100) + 2px),
-    35px);
-  text-align: left;
+}
+
+.section-1.mobile .tiles .t-1 img {
+  width: 100%;
+  height: auto;
 }
 
 .section-1.mobile .tiles .t-2 {
   grid-area: t-2;
+  border-radius: 0 2rem 2rem 0;
+  overflow: hidden;
 }
 
 .section-1.mobile .tiles .t-2 img {
   width: 100%;
   height: auto;
+  scale: 1.07;
+  transform: translateX(4%);
 }
 
 .section-1.mobile .tiles .t-3 {
   grid-area: t-3;
+}
+
+.section-1.mobile .tiles .t-3 img {
   width: 100%;
-  height: 100%;
-  padding: 0;
-  display: grid;
-  align-items: center;
+  height: auto;
 }
 
 .section-1.mobile .tiles .t-4 {
   grid-area: t-4;
-  overflow: hidden;
-  border-radius: 2rem;
 }
 
 .section-1.mobile .tiles .t-4 img {
   width: 100%;
   height: auto;
-  transform: translateY(1%) scale(1.02);
 }
 
 .section-1.mobile .tiles .t-5 {
@@ -719,8 +715,6 @@ header .nav-bar .btn {
 
 .section-1.mobile .tiles .t-6 {
   grid-area: t-6;
-  border-radius: 2rem;
-  overflow: hidden;
 }
 
 .section-1.mobile .tiles .t-6 img {
@@ -730,42 +724,15 @@ header .nav-bar .btn {
 
 .section-1.mobile .tiles .t-7 {
   grid-area: t-7;
+}
+
+.section-1.mobile .tiles .t-7 img {
   width: 100%;
-  font-weight: 400;
-  font-size: 1.7rem;
-  line-height: clamp(2px,
-    calc((((33) * ((100vw - 320px) * 100) / (1120)) / 100) + 2px),
-    35px);
-  text-align: left;
+  height: auto;
 }
 
 .section-1.mobile .tiles .t-8 {
   grid-area: t-8;
-}
-
-.section-1.mobile .tiles .t-8 img {
-  width: 100%;
-  height: auto;
-}
-
-.section-1.mobile .tiles .t-9 {
-  grid-area: t-9;
-}
-
-.section-1.mobile .tiles .t-9 img {
-  width: 100%;
-  height: 100%;
-  transform: translate(0, 2%);
-  scale: 1.04;
-}
-
-.section-1.mobile .tiles .t-10 {
-  grid-area: t-10;
-}
-
-.section-1.mobile .tiles .t-10 img {
-  width: 100%;
-  height: auto;
 }
 
 @media (min-width: 1450px) {

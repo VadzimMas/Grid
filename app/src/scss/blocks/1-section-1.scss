@@ -1,7 +1,6 @@
 .section-1.desktop {
     margin: 0 auto;
     position: relative;
-    padding: 4rem 6rem;
     overflow: hidden;
     z-index: 1;
     @include adaptivePadding(100, 135, 100, 135, 10);
@@ -176,10 +175,9 @@
     display: none;
     margin: 0 auto;
     position: relative;
-    padding: 4rem 6rem;
     overflow: hidden;
     z-index: 1;
-    @include adaptivePadding(100, 135, 100, 135, 10);
+    @include adaptivePadding(100, 0, 100, 0, 10);
 
     .bg-img {
         position: absolute;
@@ -268,30 +266,25 @@
         background-color: red;
         display: grid;
         grid-template-columns:
-            adaptiveWidth(270, 60) adaptiveWidth(270, 60) adaptiveWidth(170, 50) adaptiveWidth(170, 50) adaptiveWidth(170, 50);
+            adaptiveWidth(224, 50) adaptiveWidth(620, 50) adaptiveWidth(457, 30) adaptiveWidth(100, 50) adaptiveWidth(33, 33);
+
         grid-template-rows:
-            adaptiveHeight(30, 10) adaptiveHeight(30, 10) 0 adaptiveHeight(220, 58) adaptiveHeight(185, 28) adaptiveHeight(70, 25) adaptiveHeight(10, 38);
+            adaptiveHeight(250, 10) adaptiveHeight(20, 10) adaptiveHeight(540, 58) adaptiveHeight(430, 25) adaptiveHeight(164, 38) adaptiveHeight(226, 38) adaptiveHeight(40, 40) adaptiveHeight(250, 40);
+
         grid-gap: adaptiveWidth(30, 8);
         grid-template-areas:
-            't-1 t-4 t-4 ... ...'
-            '... t-4 t-4 t-7 t-7'
-            't-2 t-4 t-4 ... ...'
-            't-2 t-4 t-4 t-8 t-9'
-            't-2 t-5 t-6 t-6 t-10'
-            't-3 t-5 t-6 t-6 t-10'
-            '... ... t-6 t-6 ...'
+            '... t-3 t-3 ... ...'
+            't-1 t-3 t-3 ... ...'
+            't-1 t-3 t-3 t-6 t-6'
+            't-1 t-4 t-7 t-7 t-7'
+            't-2 ... ... ... ...'
+            't-2 t-5 ... ... ...'
+            '... ... t-8 t-8 ...'
+            '... ... ... ... ...'
         ;
 
         .t-1 {
             grid-area: t-1;
-            font-weight: 400;
-            font-size: 1.7rem;
-            @include adaptiveLineHeight(35, 2);
-            text-align: left;
-        }
-
-        .t-2 {
-            grid-area: t-2;
 
             img {
                 width: 100%;
@@ -299,24 +292,36 @@
             }
         }
 
-        .t-3 {
-            grid-area: t-3;
-            width: 100%;
-            height: 100%;
-            padding: 0;
-            display: grid;
-            align-items: center;
-        }
+        .t-2 {
+            grid-area: t-2;
+            border-radius: 0 2rem 2rem 0;
 
-        .t-4 {
-            grid-area: t-4;
             overflow: hidden;
-            border-radius: 2rem;
 
             img {
                 width: 100%;
                 height: auto;
-                transform: translateY(1%) scale(1.02);
+                scale: 1.07;
+                transform: translateX(4%);
+            }
+        }
+
+        .t-3 {
+            grid-area: t-3;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .t-4 {
+            grid-area: t-4;
+
+            img {
+
+                width: 100%;
+                height: auto;
             }
         }
 
@@ -324,6 +329,7 @@
             grid-area: t-5;
 
             img {
+
                 width: 100%;
                 height: auto;
             }
@@ -331,8 +337,6 @@
 
         .t-6 {
             grid-area: t-6;
-            border-radius: 2rem;
-            overflow: hidden;
 
             img {
                 width: 100%;
@@ -342,41 +346,19 @@
 
         .t-7 {
             grid-area: t-7;
-            width: 100%;
-            font-weight: 400;
-            font-size: 1.7rem;
-            @include adaptiveLineHeight(35, 2);
-            text-align: left;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
         }
 
         .t-8 {
             grid-area: t-8;
 
-            img {
-                width: 100%;
-                height: auto;
-            }
+
         }
 
-        .t-9 {
-            grid-area: t-9;
-
-            img {
-                width: 100%;
-                height: 100%;
-                transform: translate(0, 2%);
-                scale: 1.04;
-            }
-        }
-
-        .t-10 {
-            grid-area: t-10;
-
-            img {
-                width: 100%;
-                height: auto;
-            }
-        }
     }
 }
 
