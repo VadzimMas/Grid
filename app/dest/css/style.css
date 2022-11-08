@@ -628,36 +628,35 @@ header .nav-bar .btn {
 }
 
 .section-1.mobile .tiles {
-  background-color: red;
   display: grid;
-  grid-template-columns: clamp(50px,
-    calc((((174) * ((100vw - 320px) * 100) / (1120)) / 100) + 50px),
-    224px) clamp(50px,
-    calc((((570) * ((100vw - 320px) * 100) / (1120)) / 100) + 50px),
-    620px) clamp(30px,
-    calc((((427) * ((100vw - 320px) * 100) / (1120)) / 100) + 30px),
-    457px) clamp(50px,
-    calc((((50) * ((100vw - 320px) * 100) / (1120)) / 100) + 50px),
-    100px) clamp(33px,
-    calc((((0) * ((100vw - 320px) * 100) / (1120)) / 100) + 33px),
-    33px);
-  grid-template-rows: clamp(10px,
-    calc((((240) * ((100vw - 320px) * 100) / (1120)) / 100) + 10px),
-    250px) clamp(10px,
-    calc((((10) * ((100vw - 320px) * 100) / (1120)) / 100) + 10px),
-    20px) clamp(58px,
-    calc((((482) * ((100vw - 320px) * 100) / (1120)) / 100) + 58px),
-    540px) clamp(25px,
-    calc((((405) * ((100vw - 320px) * 100) / (1120)) / 100) + 25px),
-    430px) clamp(38px,
-    calc((((126) * ((100vw - 320px) * 100) / (1120)) / 100) + 38px),
-    164px) clamp(38px,
-    calc((((188) * ((100vw - 320px) * 100) / (1120)) / 100) + 38px),
-    226px) clamp(40px,
-    calc((((0) * ((100vw - 320px) * 100) / (1120)) / 100) + 40px),
-    40px) clamp(40px,
-    calc((((210) * ((100vw - 320px) * 100) / (1120)) / 100) + 40px),
-    250px);
+  grid-template-columns: clamp(47px,
+    calc((((181) * ((100vw - 320px) * 100) / (1120)) / 100) + 47px),
+    228px) clamp(120px,
+    calc((((450) * ((100vw - 320px) * 100) / (1120)) / 100) + 120px),
+    570px) clamp(80px,
+    calc((((244) * ((100vw - 320px) * 100) / (1120)) / 100) + 80px),
+    324px) clamp(25px,
+    calc((((123) * ((100vw - 320px) * 100) / (1120)) / 100) + 25px),
+    148px) clamp(15px,
+    calc((((35) * ((100vw - 320px) * 100) / (1120)) / 100) + 15px),
+    50px);
+  grid-template-rows: clamp(54px,
+    calc((((146) * ((100vw - 320px) * 100) / (1120)) / 100) + 54px),
+    200px) clamp(0px,
+    calc((((19) * ((100vw - 320px) * 100) / (1120)) / 100) + 0px),
+    19px) clamp(100px,
+    calc((((375) * ((100vw - 320px) * 100) / (1120)) / 100) + 100px),
+    475px) clamp(74px,
+    calc((((296) * ((100vw - 320px) * 100) / (1120)) / 100) + 74px),
+    370px) clamp(43px,
+    calc((((152) * ((100vw - 320px) * 100) / (1120)) / 100) + 43px),
+    195px) clamp(38px,
+    calc((((67) * ((100vw - 320px) * 100) / (1120)) / 100) + 38px),
+    105px) clamp(40px,
+    calc((((40) * ((100vw - 320px) * 100) / (1120)) / 100) + 40px),
+    80px) clamp(40px,
+    calc((((355) * ((100vw - 320px) * 100) / (1120)) / 100) + 40px),
+    395px);
   grid-gap: clamp(8px,
     calc((((22) * ((100vw - 320px) * 100) / (1120)) / 100) + 8px),
     30px);
@@ -733,6 +732,8 @@ header .nav-bar .btn {
 
 .section-1.mobile .tiles .t-8 {
   grid-area: t-8;
+  font-weight: 700;
+  font-size: 2.8rem;
 }
 
 @media (min-width: 1450px) {

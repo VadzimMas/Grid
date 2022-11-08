@@ -263,13 +263,12 @@
     }
 
     .tiles {
-        background-color: red;
         display: grid;
         grid-template-columns:
-            adaptiveWidth(224, 50) adaptiveWidth(620, 50) adaptiveWidth(457, 30) adaptiveWidth(100, 50) adaptiveWidth(33, 33);
+            adaptiveWidth(228, 47) adaptiveWidth(570, 120) adaptiveWidth(324, 80) adaptiveWidth(148, 25) adaptiveWidth(50, 15);
 
         grid-template-rows:
-            adaptiveHeight(250, 10) adaptiveHeight(20, 10) adaptiveHeight(540, 58) adaptiveHeight(430, 25) adaptiveHeight(164, 38) adaptiveHeight(226, 38) adaptiveHeight(40, 40) adaptiveHeight(250, 40);
+            adaptiveHeight(200, 54) adaptiveHeight(19, 0) adaptiveHeight(475, 100) adaptiveHeight(370, 74) adaptiveHeight(195, 43) adaptiveHeight(105, 38) adaptiveHeight(80, 40) adaptiveHeight(395, 40);
 
         grid-gap: adaptiveWidth(30, 8);
         grid-template-areas:
@@ -282,6 +281,7 @@
             '... ... t-8 t-8 ...'
             '... ... ... ... ...'
         ;
+        // margin-bottom: adaptiveMarginBatom();
 
         .t-1 {
             grid-area: t-1;
@@ -355,6 +355,8 @@
 
         .t-8 {
             grid-area: t-8;
+            font-weight: 700;
+            font-size: 2.8rem;
 
 
         }
