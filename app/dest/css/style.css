@@ -250,7 +250,9 @@ header .nav-bar .logo {
 
 header .nav-bar .logo img {
   max-width: 7rem;
-  margin-left: -6rem;
+  margin-left: clamp(-60px,
+      calc((((-60) * ((100vw - 320px) * 100) / (1120)) / 100) + 0px),
+      0px);
 }
 
 header .nav-bar .logo h2 {

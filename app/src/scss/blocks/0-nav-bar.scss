@@ -23,9 +23,11 @@ header {
             align-items: center;
             text-decoration: none;
 
+
+
             img {
                 max-width: 7rem;
-                margin-left: -6rem;
+                margin-left: adaptiveSize(-60, 0);
             }
 
             h2 {
