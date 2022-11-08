@@ -3,7 +3,7 @@
     position: relative;
     overflow: hidden;
     z-index: 1;
-    @include adaptivePadding(100, 135, 100, 135, 10);
+    @include adaptivePadding(100, 135, 135, 135, 10);
 
     .bg-img {
         position: absolute;
@@ -177,7 +177,7 @@
     position: relative;
     overflow: hidden;
     z-index: 1;
-    @include adaptivePadding(100, 0, 100, 0, 10);
+    padding: adaptiveSize(100, 10) adaptiveSize(0, 0) adaptiveSize(100, 40) adaptiveSize(0, 0);
 
     .bg-img {
         position: absolute;
