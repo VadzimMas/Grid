@@ -1,3 +1,5 @@
+// toggle class active to burger menu and links for futher styling
+
 var burger = document.getElementsByClassName('burger')[0];
 var links = document.getElementsByClassName('links')[0];
 var links_a = links.getElementsByTagName('a');

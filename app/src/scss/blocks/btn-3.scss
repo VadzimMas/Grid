@@ -1,20 +1,20 @@
-.btn-1 {
+.btn-3 {
     padding: 0.7em 1.7em;
-    border-radius: 30px;
+    border-radius: 10px;
+    border: 1px solid var(--bg-btn);
+    text-align: center;
     white-space: nowrap;
     text-decoration: none;
     font-weight: 600;
     font-size: 2rem;
-    background-color: var(--bg-btn);
-    color: var(--text-color-white);
-    box-shadow: var(--btn-box-shadow);
+    color: var(--text-color-purple);
     transition-duration: 0.3s;
 }
 
-.btn-1:hover {
+.btn-3:hover {
     box-shadow: var(--btn-box-shadow-hover);
 }
 
-.btn-1:active {
+.btn-3:active {
     box-shadow: var(--btn-box-shadow-active)
 }
