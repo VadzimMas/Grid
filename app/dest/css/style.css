@@ -96,7 +96,9 @@ dd {
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 
 ul[role=list],
-ol[role=list] {
+ol[role=list],
+ul,
+ol {
   list-style: none;
 }
 
@@ -116,8 +118,12 @@ body {
 
 /* A elements that don't have a class get default styles */
 
-a:not([class]) {
+a:not([class]),
+a {
   text-decoration-skip-ink: auto;
+  text-decoration: none;
+  color: #000;
+  display: block;
 }
 
 /* Make images easier to work with */
@@ -407,7 +413,9 @@ header .nav-bar .btn-1 {
 }
 
 .section-1.desktop .title h1 {
-  font-size: 9.6rem;
+  font-size: clamp(65px,
+      calc((((40) * ((100vw - 320px) * 100) / (1120)) / 100) + 65px),
+      105px);
   text-shadow: 0px 4px 0px #FFFFFF;
 }
 
@@ -806,9 +814,6 @@ header .nav-bar .btn-1 {
   text-align: left;
   display: grid;
   grid-template-columns: 1fr;
-  margin-bottom: clamp(10px,
-      calc((((40) * ((100vw - 320px) * 100) / (1120)) / 100) + 10px),
-      50px);
 }
 
 .section-2 .text {
@@ -891,6 +896,337 @@ header .nav-bar .btn-1 {
 
 .section-2 .cards .card:nth-child(4) .img {
   background-color: #00B894;
+}
+
+.section-3 {
+  position: relative;
+  z-index: 0;
+  padding-top: clamp(10px,
+      calc((((40) * ((100vw - 320px) * 100) / (1120)) / 100) + 10px),
+      50px);
+  padding-right: clamp(10px,
+      calc((((125) * ((100vw - 320px) * 100) / (1120)) / 100) + 10px),
+      135px);
+  padding-bottom: clamp(10px,
+      calc((((40) * ((100vw - 320px) * 100) / (1120)) / 100) + 10px),
+      50px);
+  padding-left: clamp(10px,
+      calc((((125) * ((100vw - 320px) * 100) / (1120)) / 100) + 10px),
+      135px);
+}
+
+.section-3 .section-3-title {
+  margin-bottom: 4rem;
+}
+
+.section-3 .section-3-title h2 {
+  font-weight: 900;
+  font-size: 6.4rem;
+}
+
+.section-3 .section-3-title h3 {
+  font-weight: 700;
+  font-size: 3.2rem;
+  color: #ADADAD;
+}
+
+.section-3 .section-3-title h3 span {
+  position: relative;
+  color: #6C5CE7;
+  z-index: 0;
+}
+
+.section-3 .section-3-title h3 span::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: -10%;
+  width: 100%;
+  height: 50%;
+  background-color: #FDCB6E;
+  border-radius: 1rem;
+}
+
+.section-3 img.bg-img {
+  position: absolute;
+  left: 35%;
+  bottom: 2%;
+  z-index: -1;
+}
+
+.section-3 .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, clamp(300px, calc((((70) * ((100vw - 320px) * 100) / (1120)) / 100) + 300px), 370px));
+  grid-template-rows: min-content;
+  gap: clamp(10px,
+      calc((((20) * ((100vw - 320px) * 100) / (1120)) / 100) + 10px),
+      30px);
+  justify-content: center;
+}
+
+.section-3 .cards .card {
+  border: 1px solid #000;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content min-content min-content auto;
+  justify-items: start;
+  gap: 2rem;
+  padding: 2.5rem;
+  border-radius: 2rem;
+  transition: 0.5s;
+  background-color: var(--bg-main);
+}
+
+.section-3 .cards .card .card-title {
+  display: grid;
+  grid-template-columns: repeat(2, min-content);
+  justify-content: space-between;
+  justify-self: stretch;
+}
+
+.section-3 .cards .card .card-title h2 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--text-color-purple);
+  justify-self: start;
+  white-space: nowrap;
+}
+
+.section-3 .cards .card .card-title span {
+  color: var(--text-color-black);
+  border-radius: 1.5rem;
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: 0.5rem;
+  padding-left: 1em;
+  padding-right: 0.6em;
+  text-transform: uppercase;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  border: 1px solid #000;
+}
+
+.section-3 .cards .card .price {
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+}
+
+.section-3 .cards .card .price span {
+  font-weight: 700;
+  font-size: 4.8rem;
+}
+
+.section-3 .cards .card ul {
+  list-style: none;
+}
+
+.section-3 .cards .card ul li {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 1rem;
+  align-content: center;
+  font-weight: 400;
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+}
+
+.section-3 .cards .card ul li .img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.section-3 .cards .card .btn-3 {
+  align-self: end;
+  justify-self: stretch;
+}
+
+.section-3 .cards .card:nth-child(1) ul li .img {
+  background-color: #C2C2C2;
+}
+
+.section-3 .cards .card:nth-child(2) ul li .img {
+  background-color: #FDCB6E;
+}
+
+.section-3 .cards .card:nth-child(3) ul li .img {
+  background-color: #55EFC4;
+}
+
+.section-3 .cards .card:hover {
+  box-shadow: var(--btn-box-shadow-hover);
+}
+
+.section-3 .cards .card:hover .btn-3 {
+  align-self: end;
+  justify-self: stretch;
+  background-color: var(--text-color-purple);
+  color: var(--text-color-white);
+  transition: 0.6s;
+}
+
+footer {
+  padding-top: clamp(10px,
+      calc((((40) * ((100vw - 320px) * 100) / (1120)) / 100) + 10px),
+      50px);
+  padding-right: clamp(10px,
+      calc((((125) * ((100vw - 320px) * 100) / (1120)) / 100) + 10px),
+      135px);
+  padding-bottom: clamp(10px,
+      calc((((40) * ((100vw - 320px) * 100) / (1120)) / 100) + 10px),
+      50px);
+  padding-left: clamp(10px,
+      calc((((125) * ((100vw - 320px) * 100) / (1120)) / 100) + 10px),
+      135px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  text-align: left;
+}
+
+footer .title {
+  font-weight: 800;
+  font-size: clamp(12px,
+      calc((((0) * ((100vw - 320px) * 100) / (1120)) / 100) + 12px),
+      12px);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #ADADAD;
+  margin-bottom: 1rem;
+}
+
+footer .left-block {
+  border: 1px solid #000;
+}
+
+footer .left-block .follow-us {
+  margin-bottom: 2rem;
+}
+
+footer .left-block .follow-us ul {
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  justify-content: start;
+}
+
+footer .left-block .follow-us ul li a {
+  border-radius: 50%;
+  display: block;
+  margin-right: 4rem;
+}
+
+footer .left-block .follow-us ul li a:hover {
+  background-color: #FFEAA7;
+}
+
+footer .left-block .follow-us ul li a img {
+  width: 4rem;
+  height: 4rem;
+}
+
+footer .information ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: left;
+}
+
+footer .information ul li a {
+  font-weight: 400;
+  font-size: 1.4rem;
+  letter-spacing: 0.25px;
+  color: var(--text-color-black);
+  margin: 0.6rem 0;
+}
+
+footer .information ul li a:hover {
+  text-decoration: underline;
+}
+
+footer .right-block {
+  border: 1px solid #000;
+}
+
+footer .right-block .follow-us {
+  margin-bottom: 2rem;
+}
+
+footer .right-block .follow-us a {
+  font-weight: 700;
+  font-size: 3.2rem;
+  letter-spacing: -0.5px;
+  color: var(--text-color-purple);
+}
+
+footer .right-block .keep-in-touch fieldset {
+  display: grid;
+  grid-template-columns: repeat(4, clamp(50px, calc((((78) * ((100vw - 320px) * 100) / (1120)) / 100) + 50px), 128px));
+  grid-template-rows: auto;
+  grid-template-areas: "t-1 t-1 t-2 t-2" "t-3 t-3 ... t-4";
+  gap: 2rem;
+  border: none;
+}
+
+footer .right-block .keep-in-touch fieldset :nth-child(1) {
+  grid-area: t-1;
+  width: 100%;
+}
+
+footer .right-block .keep-in-touch fieldset :nth-child(2) {
+  grid-area: t-2;
+  width: 100%;
+}
+
+footer .right-block .keep-in-touch fieldset :nth-child(3) {
+  grid-area: t-3;
+  width: 38rem;
+  height: 8rem;
+}
+
+footer .right-block .keep-in-touch fieldset :nth-child(4) {
+  grid-area: t-4;
+  width: 17rem;
+  justify-self: end;
+}
+
+footer .right-block .keep-in-touch fieldset input {
+  background-color: hsla(0deg, 0%, 76%, 0.5);
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+}
+
+footer .right-block .keep-in-touch fieldset input::placeholder {
+  font-weight: 400;
+  font-size: 1.8 rem;
+  color: #2D3436;
+}
+
+footer .right-block .keep-in-touch fieldset input[type=submit] {
+  font-weight: 700;
+  font-size: 2.4rem;
+  letter-spacing: 0.25rem;
+  color: var(--text-color-white);
+  text-transform: uppercase;
+  background-color: var(--bg-btn);
+}
+
+footer .right-block .keep-in-touch fieldset textarea {
+  background-color: hsla(0deg, 0%, 76%, 0.5);
+  border: 2px solid hsla(247deg, 74%, 63%, 0.2);
+  border-radius: 1rem;
+}
+
+footer .right-block .keep-in-touch fieldset textarea::placeholder {
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 0.2px;
+  color: var(--text-color-purple);
 }
 
 @media (min-width: 1450px) {

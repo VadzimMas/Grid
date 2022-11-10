@@ -6,7 +6,10 @@ const pathDest = ('./app/dest');
 module.exports = {
     dest: pathDest,
     html: {
-        src: pathSrc + '/*.html',
+        src: [
+            pathSrc + '/**/*.html',
+            '!' + pathSrc + '/html/blocks/*.html'
+        ],
         watch: pathSrc + '/**/*.html',
         dest: pathDest,
     },

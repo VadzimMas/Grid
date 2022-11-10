@@ -15,15 +15,26 @@ img {
     display: block;
 }
 
+$xx-large: adaptiveSize(105, 65);
+$x-large: adaptiveSize(64, 24);
+$large: adaptiveSize(75, 5);
+$medium: adaptiveSize(60, 5);
+$small: adaptiveSize(45, 5);
+$x-small: adaptiveSize(30, 5);
+$xx-small: adaptiveSize(15, 12);
+
 :root {
     @include adaptiveFontSize(10, 4.5);
+    //background colors
     --bg-body: #A29BFE;
     --bg-main: rgb(250, 250, 250);
     --bg-btn: #6C5CE7;
+    //text colors
     --text-color-black: #2D3436;
     --text-color-white: #FFFFFF;
     --text-color-red: #D63031;
     --text-color-purple: #6C5CE7;
+    //shadows
     --btn-box-shadow:
         0 0 0.5vw rgba(0, 0, 0, 0.5),
         inset 0 0 0 rgba(0, 0, 0, 0);
@@ -59,3 +70,5 @@ body {
 @import 'blocks/0-nav-bar.scss';
 @import 'blocks/1-section-1.scss';
 @import 'blocks/2-section-2.scss';
+@import 'blocks/3-section-3.scss';
+@import 'blocks/4-footer.scss';

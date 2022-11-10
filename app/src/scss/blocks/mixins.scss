@@ -1,5 +1,24 @@
+//width from macket
 $modelWidth: 1440;
 $phoneWidth: 320;
+//fonts from macket
+$xx-large: adaptiveSize(105, 65);
+$x-large: adaptiveSize(90, 60);
+$large: adaptiveSize(75, 50);
+$medium: adaptiveSize(60, 45);
+$small: adaptiveSize(45, 30);
+$x-small: adaptiveSize(30, 15);
+$xx-small: adaptiveSize(15, 10);
+
+
+// delete styles in lists
+@mixin list {
+
+  ul,
+  ol {
+    list-style: none;
+  }
+}
 
 
 //UNIVERSAL ADAPTIVE SIZE TO ANY DEVICE
