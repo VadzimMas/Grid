@@ -249,6 +249,10 @@ body {
   color: var(--text-color-black);
 }
 
+body.active {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -1363,7 +1367,7 @@ footer .right-block .keep-in-touch div textarea::placeholder {
 
 @media (max-width: 768px) {
   header .nav-bar {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 0.1fr 1fr 1fr;
     justify-content: space-between;
   }
 

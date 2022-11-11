@@ -56,6 +56,10 @@ body {
     color: var(--text-color-black);
 }
 
+body.active {
+    overflow: hidden;
+}
+
 @media(min-width:1450px) {
     body {
         background-color: var(--bg-body);
