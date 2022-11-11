@@ -8,13 +8,13 @@
 
         h2 {
             font-weight: 900;
-            font-size: 6.4rem;
+            font-size: adaptiveSize(64, 26);
         }
 
         h3 {
             font-weight: 700;
-            font-size: 3.2rem;
-            color: #ADADAD;
+            font-size: adaptiveSize(32, 16);
+            color: rgb(173, 173, 173);
 
             span {
                 position: relative;
@@ -70,7 +70,7 @@
 
                 h2 {
                     font-weight: 700;
-                    font-size: 1.8rem;
+                    font-size: adaptiveSize(18, 14);
                     color: var(--text-color-purple);
                     justify-self: start;
                     white-space: nowrap;
@@ -80,7 +80,7 @@
                     color: var(--text-color-black);
                     border-radius: 1.5rem;
                     font-weight: 800;
-                    font-size: 1.2rem;
+                    font-size: adaptiveSize(12, 10);
                     letter-spacing: .5rem;
                     padding-left: 1em;
                     padding-right: 0.6em;
@@ -94,12 +94,13 @@
 
             .price {
                 font-weight: 800;
-                font-size: 1.2rem;
+                font-size: adaptiveSize(18, 14);
                 letter-spacing: 0.2rem;
 
                 span {
                     font-weight: 700;
-                    font-size: 4.8rem;
+                    font-size: adaptiveSize(48, 24);
+
                 }
             }
 
@@ -108,8 +109,8 @@
 
                 li {
                     .img {
-                        width: 30px;
-                        height: 30px;
+                        width: adaptiveSize(30, 25);
+                        height: adaptiveSize(30, 25);
                         border-radius: 50%;
                         display: grid;
                         justify-content: center;
@@ -121,7 +122,7 @@
                     gap: 1rem;
                     align-content: center;
                     font-weight: 400;
-                    font-size: 1.8rem;
+                    font-size: adaptiveSize(20, 14);
                     margin-bottom: 3rem;
                 }
             }
@@ -129,6 +130,8 @@
             .btn-3 {
                 align-self: end;
                 justify-self: stretch;
+                font-size: adaptiveSize(20, 14);
+
             }
 
             &:nth-child(1) {

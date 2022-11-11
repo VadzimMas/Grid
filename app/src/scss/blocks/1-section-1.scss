@@ -77,7 +77,7 @@
         .t-1 {
             grid-area: t-1;
             font-weight: 400;
-            font-size: 1.7rem;
+            font-size: adaptiveSize(18, 10);
             @include adaptiveLineHeight(35, 2);
             text-align: left;
         }
@@ -138,7 +138,8 @@
             grid-area: t-7;
             width: 100%;
             font-weight: 400;
-            font-size: 1.7rem;
+            font-size: adaptiveSize(18, 10);
+
             @include adaptiveLineHeight(35, 2);
             text-align: left;
         }

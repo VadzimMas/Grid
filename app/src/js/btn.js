@@ -1,6 +1,6 @@
 // togle different classes for button for futher styling
 let btn_1 = document.querySelectorAll('.btn-1');
-var x = window.matchMedia("(max-width: 425px)")
+var x = window.matchMedia("(max-width: 768px)")
 // Call listener function at run time
 myFunction(x);
 // Attach listener function on state changes

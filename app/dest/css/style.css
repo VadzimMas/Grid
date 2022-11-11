@@ -120,7 +120,8 @@ body {
 
 a:not([class]),
 a {
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
   text-decoration: none;
   color: #000;
   display: block;
@@ -323,7 +324,9 @@ header .nav-bar .links li a {
   padding: 1px;
   color: var(--text-color-purple);
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: clamp(14px,
+      calc((((6) * ((100vw - 320px) * 100) / (1120)) / 100) + 14px),
+      20px);
   white-space: nowrap;
   transition-duration: 0.3s;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -471,7 +474,9 @@ header .nav-bar .btn-1 {
 .section-1.desktop .tiles .t-1 {
   grid-area: t-1;
   font-weight: 400;
-  font-size: 1.7rem;
+  font-size: clamp(10px,
+      calc((((8) * ((100vw - 320px) * 100) / (1120)) / 100) + 10px),
+      18px);
   line-height: clamp(2px,
     calc((((33) * ((100vw - 320px) * 100) / (1120)) / 100) + 2px),
     35px);
@@ -536,7 +541,9 @@ header .nav-bar .btn-1 {
   grid-area: t-7;
   width: 100%;
   font-weight: 400;
-  font-size: 1.7rem;
+  font-size: clamp(10px,
+      calc((((8) * ((100vw - 320px) * 100) / (1120)) / 100) + 10px),
+      18px);
   line-height: clamp(2px,
     calc((((33) * ((100vw - 320px) * 100) / (1120)) / 100) + 2px),
     35px);
@@ -824,7 +831,9 @@ header .nav-bar .btn-1 {
 
 .section-2 .text h2 {
   font-weight: 700;
-  font-size: 3.2rem;
+  font-size: clamp(20px,
+      calc((((12) * ((100vw - 320px) * 100) / (1120)) / 100) + 20px),
+      32px);
   margin-bottom: clamp(10px,
       calc((((20) * ((100vw - 320px) * 100) / (1120)) / 100) + 10px),
       30px);
@@ -832,7 +841,9 @@ header .nav-bar .btn-1 {
 
 .section-2 .text p {
   font-weight: 400;
-  font-size: 2.4rem;
+  font-size: clamp(16px,
+      calc((((8) * ((100vw - 320px) * 100) / (1120)) / 100) + 16px),
+      24px);
 }
 
 .section-2 .cards {
@@ -869,17 +880,23 @@ header .nav-bar .btn-1 {
 
 .section-2 .cards .card h3 {
   font-weight: 700;
-  font-size: 2.4rem;
+  font-size: clamp(16px,
+      calc((((8) * ((100vw - 320px) * 100) / (1120)) / 100) + 16px),
+      24px);
 }
 
 .section-2 .cards .card p {
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: clamp(14px,
+      calc((((6) * ((100vw - 320px) * 100) / (1120)) / 100) + 14px),
+      20px);
 }
 
 .section-2 .cards .card a.btn {
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: clamp(12px,
+      calc((((6) * ((100vw - 320px) * 100) / (1120)) / 100) + 12px),
+      18px);
 }
 
 .section-2 .cards .card:nth-child(1) .img {
@@ -921,13 +938,17 @@ header .nav-bar .btn-1 {
 
 .section-3 .section-3-title h2 {
   font-weight: 900;
-  font-size: 6.4rem;
+  font-size: clamp(26px,
+      calc((((38) * ((100vw - 320px) * 100) / (1120)) / 100) + 26px),
+      64px);
 }
 
 .section-3 .section-3-title h3 {
   font-weight: 700;
-  font-size: 3.2rem;
-  color: #ADADAD;
+  font-size: clamp(16px,
+      calc((((16) * ((100vw - 320px) * 100) / (1120)) / 100) + 16px),
+      32px);
+  color: rgb(173, 173, 173);
 }
 
 .section-3 .section-3-title h3 span {
@@ -987,7 +1008,9 @@ header .nav-bar .btn-1 {
 
 .section-3 .cards .card .card-title h2 {
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: clamp(14px,
+      calc((((4) * ((100vw - 320px) * 100) / (1120)) / 100) + 14px),
+      18px);
   color: var(--text-color-purple);
   justify-self: start;
   white-space: nowrap;
@@ -997,7 +1020,9 @@ header .nav-bar .btn-1 {
   color: var(--text-color-black);
   border-radius: 1.5rem;
   font-weight: 800;
-  font-size: 1.2rem;
+  font-size: clamp(10px,
+      calc((((2) * ((100vw - 320px) * 100) / (1120)) / 100) + 10px),
+      12px);
   letter-spacing: 0.5rem;
   padding-left: 1em;
   padding-right: 0.6em;
@@ -1010,13 +1035,17 @@ header .nav-bar .btn-1 {
 
 .section-3 .cards .card .price {
   font-weight: 800;
-  font-size: 1.2rem;
+  font-size: clamp(14px,
+      calc((((4) * ((100vw - 320px) * 100) / (1120)) / 100) + 14px),
+      18px);
   letter-spacing: 0.2rem;
 }
 
 .section-3 .cards .card .price span {
   font-weight: 700;
-  font-size: 4.8rem;
+  font-size: clamp(24px,
+      calc((((24) * ((100vw - 320px) * 100) / (1120)) / 100) + 24px),
+      48px);
 }
 
 .section-3 .cards .card ul {
@@ -1029,13 +1058,19 @@ header .nav-bar .btn-1 {
   gap: 1rem;
   align-content: center;
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: clamp(14px,
+      calc((((6) * ((100vw - 320px) * 100) / (1120)) / 100) + 14px),
+      20px);
   margin-bottom: 3rem;
 }
 
 .section-3 .cards .card ul li .img {
-  width: 30px;
-  height: 30px;
+  width: clamp(25px,
+      calc((((5) * ((100vw - 320px) * 100) / (1120)) / 100) + 25px),
+      30px);
+  height: clamp(25px,
+      calc((((5) * ((100vw - 320px) * 100) / (1120)) / 100) + 25px),
+      30px);
   border-radius: 50%;
   display: grid;
   justify-content: center;
@@ -1045,6 +1080,9 @@ header .nav-bar .btn-1 {
 .section-3 .cards .card .btn-3 {
   align-self: end;
   justify-self: stretch;
+  font-size: clamp(14px,
+      calc((((6) * ((100vw - 320px) * 100) / (1120)) / 100) + 14px),
+      20px);
 }
 
 .section-3 .cards .card:nth-child(1) ul li .img {
@@ -1072,6 +1110,7 @@ header .nav-bar .btn-1 {
 }
 
 footer {
+  position: relative;
   padding-top: clamp(10px,
       calc((((40) * ((100vw - 320px) * 100) / (1120)) / 100) + 10px),
       50px);
@@ -1079,8 +1118,8 @@ footer {
       calc((((125) * ((100vw - 320px) * 100) / (1120)) / 100) + 10px),
       135px);
   padding-bottom: clamp(10px,
-      calc((((40) * ((100vw - 320px) * 100) / (1120)) / 100) + 10px),
-      50px);
+      calc((((140) * ((100vw - 320px) * 100) / (1120)) / 100) + 10px),
+      150px);
   padding-left: clamp(10px,
       calc((((125) * ((100vw - 320px) * 100) / (1120)) / 100) + 10px),
       135px);
@@ -1088,21 +1127,26 @@ footer {
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   text-align: left;
+  padding-bottom: clamp(30px,
+      calc((((120) * ((100vw - 320px) * 100) / (1120)) / 100) + 30px),
+      150px);
+}
+
+footer .bg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 footer .title {
   font-weight: 800;
-  font-size: clamp(12px,
-      calc((((0) * ((100vw - 320px) * 100) / (1120)) / 100) + 12px),
-      12px);
+  font-size: clamp(16px,
+      calc((((0) * ((100vw - 320px) * 100) / (1120)) / 100) + 16px),
+      16px);
   letter-spacing: 2.5px;
   text-transform: uppercase;
   color: #ADADAD;
   margin-bottom: 1rem;
-}
-
-footer .left-block {
-  border: 1px solid #000;
 }
 
 footer .left-block .follow-us {
@@ -1126,30 +1170,29 @@ footer .left-block .follow-us ul li a:hover {
 }
 
 footer .left-block .follow-us ul li a img {
-  width: 4rem;
-  height: 4rem;
+  width: 40px;
+  height: 40px;
 }
 
-footer .information ul {
+footer .left-block .information ul {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
   justify-items: left;
 }
 
-footer .information ul li a {
+footer .left-block .information ul li a {
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: clamp(15px,
+      calc((((3) * ((100vw - 320px) * 100) / (1120)) / 100) + 15px),
+      18px);
   letter-spacing: 0.25px;
   color: var(--text-color-black);
-  margin: 0.6rem 0;
+  white-space: nowrap;
 }
 
-footer .information ul li a:hover {
+footer .left-block .information ul li a:hover {
   text-decoration: underline;
-}
-
-footer .right-block {
-  border: 1px solid #000;
 }
 
 footer .right-block .follow-us {
@@ -1158,73 +1201,117 @@ footer .right-block .follow-us {
 
 footer .right-block .follow-us a {
   font-weight: 700;
-  font-size: 3.2rem;
+  font-size: clamp(25px,
+      calc((((7) * ((100vw - 320px) * 100) / (1120)) / 100) + 25px),
+      32px);
   letter-spacing: -0.5px;
   color: var(--text-color-purple);
 }
 
-footer .right-block .keep-in-touch fieldset {
+footer .right-block .keep-in-touch div {
   display: grid;
-  grid-template-columns: repeat(4, clamp(50px, calc((((78) * ((100vw - 320px) * 100) / (1120)) / 100) + 50px), 128px));
+  grid-template-columns: repeat(4, clamp(29px, calc((((99) * ((100vw - 320px) * 100) / (1120)) / 100) + 29px), 128px));
   grid-template-rows: auto;
   grid-template-areas: "t-1 t-1 t-2 t-2" "t-3 t-3 ... t-4";
   gap: 2rem;
-  border: none;
 }
 
-footer .right-block .keep-in-touch fieldset :nth-child(1) {
+footer .right-block .keep-in-touch div :nth-child(1) {
   grid-area: t-1;
   width: 100%;
 }
 
-footer .right-block .keep-in-touch fieldset :nth-child(2) {
+footer .right-block .keep-in-touch div :nth-child(2) {
   grid-area: t-2;
   width: 100%;
 }
 
-footer .right-block .keep-in-touch fieldset :nth-child(3) {
+footer .right-block .keep-in-touch div :nth-child(3) {
   grid-area: t-3;
-  width: 38rem;
+  width: clamp(80px,
+      calc((((280) * ((100vw - 320px) * 100) / (1120)) / 100) + 80px),
+      360px);
   height: 8rem;
 }
 
-footer .right-block .keep-in-touch fieldset :nth-child(4) {
+footer .right-block .keep-in-touch div :nth-child(4) {
   grid-area: t-4;
-  width: 17rem;
+  width: clamp(60px,
+      calc((((130) * ((100vw - 320px) * 100) / (1120)) / 100) + 60px),
+      190px);
   justify-self: end;
 }
 
-footer .right-block .keep-in-touch fieldset input {
+footer .right-block .keep-in-touch div input {
   background-color: hsla(0deg, 0%, 76%, 0.5);
-  padding: 1rem;
+  padding: 15px;
   border: none;
   border-radius: 1rem;
+  font-size: clamp(15px,
+      calc((((2) * ((100vw - 320px) * 100) / (1120)) / 100) + 15px),
+      17px);
 }
 
-footer .right-block .keep-in-touch fieldset input::placeholder {
+footer .right-block .keep-in-touch div input::-moz-placeholder {
   font-weight: 400;
-  font-size: 1.8 rem;
   color: #2D3436;
+  font-size: clamp(15px,
+      calc((((2) * ((100vw - 320px) * 100) / (1120)) / 100) + 15px),
+      17px);
 }
 
-footer .right-block .keep-in-touch fieldset input[type=submit] {
+footer .right-block .keep-in-touch div input::placeholder {
+  font-weight: 400;
+  color: #2D3436;
+  font-size: clamp(15px,
+      calc((((2) * ((100vw - 320px) * 100) / (1120)) / 100) + 15px),
+      17px);
+}
+
+footer .right-block .keep-in-touch div input[type=submit] {
   font-weight: 700;
-  font-size: 2.4rem;
+  font-size: clamp(18px,
+      calc((((6) * ((100vw - 320px) * 100) / (1120)) / 100) + 18px),
+      24px);
   letter-spacing: 0.25rem;
   color: var(--text-color-white);
   text-transform: uppercase;
   background-color: var(--bg-btn);
+  cursor: pointer;
 }
 
-footer .right-block .keep-in-touch fieldset textarea {
+footer .right-block .keep-in-touch div input[type=submit]:hover {
+  box-shadow: var(--btn-box-shadow-hover);
+}
+
+footer .right-block .keep-in-touch div input[type=submit]:active {
+  box-shadow: var(--btn-box-shadow-active);
+}
+
+footer .right-block .keep-in-touch div textarea {
   background-color: hsla(0deg, 0%, 76%, 0.5);
   border: 2px solid hsla(247deg, 74%, 63%, 0.2);
   border-radius: 1rem;
+  resize: none;
+  font-size: clamp(15px,
+      calc((((2) * ((100vw - 320px) * 100) / (1120)) / 100) + 15px),
+      17px);
 }
 
-footer .right-block .keep-in-touch fieldset textarea::placeholder {
+footer .right-block .keep-in-touch div textarea::-moz-placeholder {
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: clamp(15px,
+      calc((((3) * ((100vw - 320px) * 100) / (1120)) / 100) + 15px),
+      18px);
+  letter-spacing: 0.2px;
+  color: var(--text-color-purple);
+}
+
+footer .right-block .keep-in-touch div textarea::placeholder {
+  font-weight: 700;
+  font-size: clamp(15px,
+      calc((((3) * ((100vw - 320px) * 100) / (1120)) / 100) + 15px),
+      18px);
   letter-spacing: 0.2px;
   color: var(--text-color-purple);
 }
@@ -1243,17 +1330,31 @@ footer .right-block .keep-in-touch fieldset textarea::placeholder {
   }
 }
 
-@media (max-width: 768px) {
-  .section-1.desktop {
-    display: none;
+@media (max-width: 1024px) {
+  footer .right-block .keep-in-touch div {
+    display: flex;
+    flex-direction: column;
   }
 
-  .section-1.mobile {
-    display: block;
+  footer .right-block .keep-in-touch div :nth-child(1) {
+    width: 100%;
+  }
+
+  footer .right-block .keep-in-touch div :nth-child(2) {
+    width: 100%;
+  }
+
+  footer .right-block .keep-in-touch div :nth-child(3) {
+    width: 100%;
+    height: 18rem;
+  }
+
+  footer .right-block .keep-in-touch div :nth-child(4) {
+    width: 100%;
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   header .nav-bar {
     grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
@@ -1266,6 +1367,9 @@ footer .right-block .keep-in-touch fieldset textarea::placeholder {
     list-style: none;
     width: 12px;
     height: 12px;
+    scale: clamp(1px,
+      calc((((9) * ((100vw - 320px) * 100) / (1120)) / 100) + 1px),
+      10px);
     margin-right: 3vw;
   }
 
@@ -1347,10 +1451,12 @@ footer .right-block .keep-in-touch fieldset textarea::placeholder {
     padding: 0.5em 2.2em;
   }
 
-  .section-1.mobile .tiles .t-8 {
-    font-size: 3rem;
-    border-radius: 0.5em;
-    padding: 0.5em 2.2em;
+  .section-1.desktop {
+    display: none;
+  }
+
+  .section-1.mobile {
+    display: block;
   }
 
   .section-2 .cards {
@@ -1376,21 +1482,6 @@ footer .right-block .keep-in-touch fieldset textarea::placeholder {
     transform: translate(0%, 6%);
   }
 
-  .section-2 .cards .card h3 {
-    font-weight: 700;
-    font-size: 2.4rem;
-  }
-
-  .section-2 .cards .card p {
-    font-weight: 400;
-    font-size: 1.8rem;
-  }
-
-  .section-2 .cards .card a.btn {
-    font-weight: 700;
-    font-size: 1.8rem;
-  }
-
   .section-2 .cards .card:nth-child(1) .img {
     background-color: #e84594;
   }
@@ -1405,6 +1496,19 @@ footer .right-block .keep-in-touch fieldset textarea::placeholder {
 
   .section-2 .cards .card:nth-child(4) .img {
     background-color: #00B894;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 425px) {
+  .section-1.mobile .tiles .t-8 {
+    font-size: 3rem;
+    border-radius: 0.5em;
+    padding: 0.5em 2.2em;
   }
 }
 
