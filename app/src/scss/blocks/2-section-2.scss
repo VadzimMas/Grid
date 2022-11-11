@@ -3,6 +3,8 @@
     text-align: left;
     display: grid;
     grid-template-columns: 1fr;
+    background-color: var(--bg-main);
+
 
     .text {
         margin-bottom: adaptiveSize(50, 10);

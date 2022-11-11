@@ -245,7 +245,7 @@ html {
 body {
   font-family: "Inter";
   font-style: normal;
-  background-color: var(--bg-body);
+  background-color: var(--bg-main);
   color: var(--text-color-black);
 }
 
@@ -254,8 +254,6 @@ body {
   margin: 0 auto;
   text-align: center;
   position: relative;
-  background-color: var(--bg-main);
-  box-shadow: 0 0 150px grey;
 }
 
 header {
@@ -821,6 +819,7 @@ header .nav-bar .btn-1 {
   text-align: left;
   display: grid;
   grid-template-columns: 1fr;
+  background-color: var(--bg-main);
 }
 
 .section-2 .text {
@@ -930,6 +929,7 @@ header .nav-bar .btn-1 {
   padding-left: clamp(10px,
       calc((((125) * ((100vw - 320px) * 100) / (1120)) / 100) + 10px),
       135px);
+  background-color: var(--bg-main);
 }
 
 .section-3 .section-3-title {
@@ -1130,6 +1130,9 @@ footer {
   padding-bottom: clamp(30px,
       calc((((120) * ((100vw - 320px) * 100) / (1120)) / 100) + 30px),
       150px);
+  border-radius: 0 0 3rem 3rem;
+  overflow: hidden;
+  background-color: var(--bg-main);
 }
 
 footer .bg {
@@ -1317,6 +1320,10 @@ footer .right-block .keep-in-touch div textarea::placeholder {
 }
 
 @media (min-width: 1450px) {
+  body {
+    background-color: var(--bg-body);
+  }
+
   .nav-bar {
     border-radius: 3rem 3rem 0 0;
   }

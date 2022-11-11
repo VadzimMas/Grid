@@ -6,6 +6,10 @@ footer {
     gap: 2rem;
     text-align: left;
     padding-bottom: adaptiveSize(150, 30);
+    border-radius: 0 0 3rem 3rem;
+    overflow: hidden;
+    background-color: var(--bg-main);
+
 
     .bg {
         position: absolute;
