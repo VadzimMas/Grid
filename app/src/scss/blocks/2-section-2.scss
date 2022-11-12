@@ -1,4 +1,5 @@
 .section-2 {
+    scroll-margin-top: 50px;
     @include adaptivePadding(50, 135, 50, 135, 10);
     text-align: left;
     display: grid;

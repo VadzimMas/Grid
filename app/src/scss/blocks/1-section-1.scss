@@ -1,7 +1,6 @@
 .section-1.desktop {
-    margin: 0 auto;
+    scroll-margin-top: 150px;
     position: relative;
-    overflow: hidden;
     z-index: 1;
     @include adaptivePadding(50, 135, 50, 135, 10);
 
@@ -176,10 +175,9 @@
 }
 
 .section-1.mobile {
+    scroll-margin-top: 150px;
     display: none;
-    margin: 0 auto;
     position: relative;
-    overflow: hidden;
     z-index: 1;
     padding: adaptiveSize(100, 10) adaptiveSize(0, 0) adaptiveSize(100, 10) adaptiveSize(0, 0);
 
@@ -376,7 +374,6 @@
 
     }
 }
-
 
 @media (max-width:768px) {
     .section-1.desktop {
