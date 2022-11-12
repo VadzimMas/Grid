@@ -4,7 +4,10 @@ global = {
     css: require('../tasks/css.js'),
     scss: require('../tasks/scss.js'),
     script: require('../tasks/script.js'),
-    html: require('../tasks/html.js'),
+    html: {
+        allHtml: require('../tasks/html/all-html.js'),
+        indexHtml: require('../tasks/html/index-html.js'),
+    },
     img: {
         convert: require('../tasks/image/convert.js'),
         clear: require('../tasks/image/clear.js'),

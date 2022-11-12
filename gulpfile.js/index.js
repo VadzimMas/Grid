@@ -6,10 +6,13 @@ exports.clear = global.clear;
 exports.css = global.css;
 exports.scss = global.scss;
 exports.script = global.script;
-exports.html = global.html;
 exports.check = global.check;
 exports.watcher = global.watcher;
 exports.server = global.server;
+exports.html = global.gulp.series(
+    global.html.allHtml,
+    global.html.indexHtml,
+);
 exports.image = global.gulp.series(
     global.img.convert,
     global.img.clear,
@@ -28,7 +31,7 @@ exports.fonts = global.gulp.series(
 // build
 exports.dev = global.gulp.series(
     global.clear,
-    global.html,
+    this.html,
     global.scss,
     global.script,
     this.image,

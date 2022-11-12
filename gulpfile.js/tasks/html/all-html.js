@@ -1,8 +1,8 @@
-const html = () => {
-    return global.gulp.src(global.path.html.src)
+const allHtml = () => {
+    return global.gulp.src(global.path.html.allHtmlSrc)
         .pipe(global.plumber({
             errorHandler: global.notify.onError(error => ({
-                title: 'HTML',
+                title: 'ALL_HTML',
                 message: error.message
             })),
         }))
@@ -19,8 +19,8 @@ const html = () => {
         // }))
         // .pipe(global.size({ title: "after htmlmin" }))
         // .pipe(global.webphtml())
-        .pipe(global.gulp.dest(global.path.html.dest))
+        .pipe(global.gulp.dest(global.path.html.allHtmlDest))
         .pipe(global.browserSync.stream())
 }
 
-module.exports = html;
+module.exports = allHtml;
